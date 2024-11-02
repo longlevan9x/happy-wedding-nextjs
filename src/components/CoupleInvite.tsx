@@ -1,13 +1,7 @@
 import Image from "next/image";
-import {Sacramento} from "next/font/google";
 import {CoupleModel} from "@/types/couple";
 import {WeddingModel} from "@/types/wedding";
-
-const sacramento = Sacramento({
-    subsets: ['latin'],
-    weight: "400",
-    display: 'swap',
-})
+import {sacramento} from "@/fonts/font";
 
 interface CoupleInviteProps {
     coupleInfo: CoupleModel,

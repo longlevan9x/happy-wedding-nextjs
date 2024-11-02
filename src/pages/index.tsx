@@ -16,6 +16,7 @@ import {Thanks} from "@/components/Thanks";
 import {CoupleInfo, Metadata, WeddingInfo} from "@/data/websiteDataInfo";
 import Head from "next/head";
 import {HeadMeta} from "@/components/HeadMeta";
+import {Gallery} from "@/components/Gallery";
 
 const playfair = Playfair({
     subsets: ['vietnamese'],
@@ -62,6 +63,7 @@ export default function Home({wishes}: WishesProps) {
                 <WebsiteInfo></WebsiteInfo>
                 <OurStory></OurStory>
                 <ConfirmJoin></ConfirmJoin>
+                <Gallery></Gallery>
                 <SendWish wishes={wishes}></SendWish>
                 <Thanks></Thanks>
             </div>
