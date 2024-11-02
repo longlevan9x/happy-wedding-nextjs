@@ -1,5 +1,7 @@
 import Image from "next/image";
 import {Sacramento} from "next/font/google";
+import {CoupleModel} from "@/types/couple";
+import {WeddingModel} from "@/types/wedding";
 
 const sacramento = Sacramento({
     subsets: ['latin'],
@@ -7,7 +9,12 @@ const sacramento = Sacramento({
     display: 'swap',
 })
 
-export function CoupleInvite() {
+interface CoupleInviteProps {
+    coupleInfo: CoupleModel,
+    weddingInfo: WeddingModel
+}
+
+export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
     return (
         <>
             <section className="my-16 lg:my-32 px-4 lg:px-10 w-full lg:w-2/3 mx-auto">
@@ -19,15 +26,17 @@ export function CoupleInvite() {
                         </div>
                         <h3 className="mb-2 md:mb-6 text-xl md:text-2xl font-medium">November 28th, 2016 New York,
                             USA</h3>
-                        <p className="text-base md:text-xl font-medium text-rose-400">We invited you to celebrate our
-                            wedding</p>
+                        <p className="text-base md:text-xl font-medium text-rose-400 text-center ">
+                            Chúng tôi trân trọng mời bạn đến chung vui trong ngày cưới của chúng tôi.
+                        </p>
                     </div>
 
                     <div className="relative flex flex-col md:flex-row">
-                        <div className="flex flex-row-reverse items-center mb-24">
+                        <div className="flex flex-row-reverse items-center mb-24 md:mb-auto">
                             <div className="flex ml-4">
                                 <div className="w-40 h-40">
-                                    <Image src="/images/sliders/1.jpg" width={500} height={500} alt="groom"
+                                    <Image src={coupleInfo.male.avatar.src} width={coupleInfo.male.avatar.with}
+                                           height={coupleInfo.male.avatar.height} alt={coupleInfo.male.fullName}
                                            className="object-cover object-center w-40 h-40 rounded-full"/>
                                 </div>
                             </div>
@@ -36,9 +45,7 @@ export function CoupleInvite() {
                                     <h3 className="text-right text-4xl font-semibold text-pink-600">Hoàng Văn</h3>
                                 </div>
                                 <p className="text-right text-base text-pink-500 md:leading-8">
-                                    Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phồ
-                                    Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương
-                                    gia đình.
+                                    {coupleInfo.male.description}
                                 </p>
                             </div>
                         </div>
@@ -52,7 +59,8 @@ export function CoupleInvite() {
                         <div className="flex items-center">
                             <div className="flex mr-4">
                                 <div className="w-40 h-40">
-                                    <Image src="/images/sliders/2.jpg" width={500} height={500} alt="groom"
+                                    <Image src={coupleInfo.female.avatar.src} width={coupleInfo.female.avatar.with}
+                                           height={coupleInfo.female.avatar.height} alt={coupleInfo.female.fullName}
                                            className="object-cover object-center w-40 h-40 rounded-full"/>
                                 </div>
                             </div>
@@ -61,9 +69,7 @@ export function CoupleInvite() {
                                     <h3 className="text-left text-4xl font-semibold text-pink-600">Việt Hương</h3>
                                 </div>
                                 <p className="text-left text-base text-pink-500 md:leading-8">
-                                    Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phồ
-                                    Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương
-                                    gia đình.
+                                    {coupleInfo.female.description}
                                 </p>
                             </div>
                         </div>

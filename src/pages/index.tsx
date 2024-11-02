@@ -10,9 +10,10 @@ import {Playfair} from "next/font/google";
 import {SendWish} from "@/components/SendWish";
 import {GetServerSideProps} from "next";
 import client from "@/libs/mongodb";
-import React from "react";
+import React, {useState} from "react";
 import {WishesProps} from "@/types/wish";
 import {Thanks} from "@/components/Thanks";
+import {CoupleInfo, WeddingInfo} from "@/data/websiteDataInfo";
 
 const playfair = Playfair({
     subsets: ['vietnamese'],
@@ -40,13 +41,16 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 export default function Home({wishes}: WishesProps) {
+    const [coupleInfo] = useState(CoupleInfo);
+    const [weddingInfo] = useState(WeddingInfo);
+
     return (
         <>
             <div className={"h-full w-full bg-red-50 relative overflow-hidden " + playfair.className}>
                 {/*<LoadingInit></LoadingInit>*/}
                 <Menu></Menu>
-                <HeroSection></HeroSection>
-                <CoupleInvite></CoupleInvite>
+                <HeroSection coupleInfo={coupleInfo} weddingInfo={weddingInfo}></HeroSection>
+                <CoupleInvite coupleInfo={coupleInfo} weddingInfo={weddingInfo}></CoupleInvite>
                 <WebsiteInfo></WebsiteInfo>
                 <OurStory></OurStory>
                 <ConfirmJoin></ConfirmJoin>

@@ -1,5 +1,8 @@
 import Image from "next/image";
 import {Sacramento} from 'next/font/google'
+import {CoupleModel} from "@/types/couple";
+import {WeddingModel} from "@/types/wedding";
+import {getDay, getMonth, getYear} from "@/utils/date";
 
 const sacramento = Sacramento({
     subsets: ['latin'],
@@ -7,7 +10,12 @@ const sacramento = Sacramento({
     display: 'swap',
 })
 
-export function HeroSection() {
+interface HeroProps {
+    coupleInfo: CoupleModel,
+    weddingInfo: WeddingModel
+}
+
+export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
     return (
         <>
             <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
@@ -20,41 +28,42 @@ export function HeroSection() {
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                 </div>
 
-                <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
-                    <div className={"flex items-center space-x-2 font-serif " + sacramento.className}>
-                        <p className="lg:text-5xl text-4xl font-bold leading-tight mb-4">JENNIFER</p>
-                        <p className="lg:text-5xl text-4xl font-bold leading-tight mb-4">&</p>
-                        <p className="lg:text-5xl text-4xl font-bold leading-tight mb-4"> MICHAEL</p>
+                <div className="relative z-10 flex flex-col justify-center items-center h-full text-center p-2">
+                    <div
+                        className={"mb-10 flex items-center space-x-2 text-5xl  " + sacramento.className}>
+                        <p className="font-bold leading-tight mb-4 w-28 sm:w-auto">{coupleInfo.male.fullName}</p>
+                        <p className="font-bold leading-tight mb-4">&</p>
+                        <p className="font-bold leading-tight mb-4 w-28 sm:w-auto">{coupleInfo.female.fullName}</p>
                     </div>
-                    <p className="text-lg text-gray-300 mb-8 tracking-[5px] border-t-2 border-b-2 py-3 px-5 font-serif">
+                    <p className="text-base sm:text-lg md:text-2xl text-gray-300 mb-12 sm:mb-20 tracking-[5px] border-t-2 border-b-2 py-3 px-5 ">
                         WE&#39;RE GETTING MARRIED
                     </p>
-                    <div className="flex space-x-10 lg:space-x-20 font-serif">
+                    <div className="relative flex space-x-5 sm:space-x-10 lg:space-x-20 font-serif">
                         <div className="relative animate__animated animate__pulse animate__infinite">
                             <div
-                                className="heart bg-opacity-40 transform scale-125 sm:scale-[1.3] lg:scale-[1.4]"></div>
+                                className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
                             <div
                                 className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
                                 <p className="text-sm sm:text-base text-white font-semibold">Ngày</p>
-                                <p className="text-2xl sm:text-3xl text-white font-bold">10</p>
+                                <p className="text-xl sm:text-3xl text-white font-bold">{getDay(weddingInfo.weddingDate)}</p>
                             </div>
                         </div>
                         <div className="relative animate__animated animate__pulse animate__infinite">
                             <div
-                                className="heart bg-opacity-40 transform scale-125 sm:scale-[1.3] lg:scale-[1.4]"></div>
+                                className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
                             <div
                                 className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
                                 <p className="text-sm sm:text-base text-white font-semibold">Tháng</p>
-                                <p className="text-2xl sm:text-3xl text-white font-bold">11</p>
+                                <p className="text-xl sm:text-3xl text-white font-bold">{getMonth(weddingInfo.weddingDate)}</p>
                             </div>
                         </div>
                         <div className="relative animate__animated animate__pulse animate__infinite">
                             <div
-                                className="heart bg-opacity-40 transform scale-125 sm:scale-[1.3] lg:scale-[1.4]"></div>
+                                className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
                             <div
                                 className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
                                 <p className="text-sm sm:text-base text-white font-semibold">Năm</p>
-                                <p className="text-2xl sm:text-3xl text-white font-bold">2024</p>
+                                <p className="text-xl sm:text-3xl text-white font-bold">{getYear(weddingInfo.weddingDate)}</p>
                             </div>
                         </div>
                     </div>
