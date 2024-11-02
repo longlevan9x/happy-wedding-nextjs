@@ -47,7 +47,7 @@ export function SendWish({wishes}: WishesProps) {
                 className="relative w-full bg-[url('/images/bg/img_bg_4.jpg')] bg-no-repeat bg-cover bg-center bg-local">
                 <div className="w-full absolute bg-black opacity-40 h-full z-10"></div>
                 <div
-                    className="w-full h-full flex-col relative z-20 flex items-center justify-center space-y-12 px-10 py-24">
+                    className="w-full h-full flex-col relative z-20 flex items-center justify-center space-y-12  px-3 sm:px-10 py-24">
                     <div className="flex justify-center flex-col items-center space-y-8">
                         <div className={"flex flex-col items-center space-y-4 " + sacramento.className}>
                             <h1 className="text-white text-4xl sm:text-6xl font-semibold">Sổ lưu bút</h1>
