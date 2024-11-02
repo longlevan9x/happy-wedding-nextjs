@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, {useState} from "react";
-import {sacramento} from "@/fonts/font";
+import {titleFont} from "@/fonts/font";
 
 export function Gallery() {
     const [galleries] = useState(Array(9).fill(0));
@@ -9,7 +9,7 @@ export function Gallery() {
         <>
             <div className="w-full 2xl:w-2/3 mx-auto py-20 px-3">
                 <div className="flex flex-col w-full mb-10 lg:mb-20">
-                    <div className={"flex flex-col items-center mb-6 " + sacramento.className}>
+                    <div className={"flex flex-col items-center mb-6 " + titleFont.className}>
                         <h1 className="text-pink-400 font-black text-5xl sm:text-6xl md:text-7xl">Album Hình Cưới</h1>
                     </div>
                     <div className="text-center">

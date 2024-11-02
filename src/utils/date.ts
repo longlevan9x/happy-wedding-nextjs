@@ -1,13 +1,24 @@
 import dayjs from "dayjs";
+import 'dayjs/locale/vi';
 
-export const getDay = (date: string) => {
-    return dayjs(date).format("DD");
+const LOCALE = "VI";
+
+export const getDay = (date: string): string => {
+    return dayjs(date).locale(LOCALE).format("DD");
 }
 
-export const getMonth = (date: string) => {
-    return dayjs(date).format("MM");
+export const getMonth = (date: string): string => {
+    return dayjs(date).locale(LOCALE).format("MM");
 }
 
-export const getYear = (date: string) => {
-    return dayjs(date).format("YYYY");
+export const getYear = (date: string): string => {
+    return dayjs(date).locale(LOCALE).format("YYYY");
+}
+
+export const dayOfWeek = (date: string): string => {
+    return dayjs(date).locale(LOCALE).format("dddd");
+}
+
+export const fullDate = (date: string): string => {
+    return dayjs(date).locale(LOCALE).format("DD, MMMM, YYYY");
 }

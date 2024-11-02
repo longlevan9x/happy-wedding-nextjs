@@ -2,6 +2,7 @@ import {Sacramento} from "next/font/google";
 import Image from "next/image";
 import React, {FormEvent, useState} from "react";
 import {WishesProps} from "@/types/wish";
+import {titleFont} from "@/fonts/font";
 
 const sacramento = Sacramento({
     subsets: ['latin'],
@@ -49,7 +50,7 @@ export function SendWish({wishes}: WishesProps) {
                 <div
                     className="w-full h-full flex-col relative z-20 flex items-center justify-center space-y-12  px-3 sm:px-10 py-24">
                     <div className="flex justify-center flex-col items-center space-y-8">
-                        <div className={"flex flex-col items-center space-y-4 " + sacramento.className}>
+                        <div className={"flex flex-col items-center space-y-4 " + titleFont.className}>
                             <h1 className="text-white text-4xl sm:text-6xl font-semibold">Sổ lưu bút</h1>
                             <Image src="/images/bg/divider.png" alt="Divider" width={150} height={21}></Image>
                         </div>

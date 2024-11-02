@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {Sacramento} from "next/font/google";
+import {titleFont} from "@/fonts/font";
 
 const sacramento = Sacramento({
     subsets: ['latin'],
@@ -17,7 +18,7 @@ export function Thanks() {
                            alt="Love"></Image>
                 </div>
                 <div
-                    className={"absolute text-6xl md:text-8xl lg:text-8xl  2xl:text-9xl top-[10%] font-semibold  italic " + sacramento.className}>Thank
+                    className={"absolute text-6xl md:text-8xl lg:text-8xl  2xl:text-9xl top-[10%] font-semibold  italic " + titleFont.className}>Thank
                     You!
                 </div>
             </div>

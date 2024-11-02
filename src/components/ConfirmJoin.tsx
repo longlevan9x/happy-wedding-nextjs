@@ -1,4 +1,5 @@
 import {Sacramento} from "next/font/google";
+import {titleFont} from "@/fonts/font";
 
 const sacramento = Sacramento({
     subsets: ['latin'],
@@ -13,11 +14,13 @@ export function ConfirmJoin() {
             <div className="w-full absolute bg-black opacity-40 h-full z-10"></div>
             <div className="w-full h-full flex-col relative z-20 flex items-center justify-center space-y-12 px-10">
                 <div className="flex justify-center flex-col items-center space-y-8">
-                    <div className={sacramento.className}>
-                        <h1 className="text-white text-4xl sm:text-6xl font-semibold">Are You Attending?</h1>
+                    <div className={titleFont.className}>
+                        <h1 className="text-white text-4xl sm:text-6xl font-semibold">Xác nhận tham dự.</h1>
                     </div>
                     <h2 className="text-gray-100 text-base sm:text-lg text-center">
-                        Please Fill-up the form to notify you that you&#39;re attending. Thanks.
+                        Chúng tôi rất mong biết bạn có tham dự hay không.
+                        Xin vui lòng điền vào biểu mẫu để xác nhận.
+                        Cảm ơn!
                     </h2>
                 </div>
                 <div

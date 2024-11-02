@@ -3,6 +3,7 @@ import {Sacramento} from 'next/font/google'
 import {CoupleModel} from "@/types/couple";
 import {WeddingModel} from "@/types/wedding";
 import {getDay, getMonth, getYear} from "@/utils/date";
+import {titleFont} from "@/fonts/font";
 
 const sacramento = Sacramento({
     subsets: ['latin'],
@@ -30,7 +31,7 @@ export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
 
                 <div className="relative z-10 flex flex-col justify-center items-center h-full text-center p-2">
                     <div
-                        className={"mb-10 flex items-center space-x-2 text-5xl  " + sacramento.className}>
+                        className={"mb-10 flex items-center space-x-2 text-5xl  " + titleFont.className}>
                         <p className="font-bold leading-tight mb-4 w-28 sm:w-auto">{coupleInfo.male.fullName}</p>
                         <p className="font-bold leading-tight mb-4">&</p>
                         <p className="font-bold leading-tight mb-4 w-28 sm:w-auto">{coupleInfo.female.fullName}</p>

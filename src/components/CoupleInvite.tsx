@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {CoupleModel} from "@/types/couple";
 import {WeddingModel} from "@/types/wedding";
-import {sacramento} from "@/fonts/font";
+import {titleFont} from "@/fonts/font";
 
 interface CoupleInviteProps {
     coupleInfo: CoupleModel,
@@ -15,11 +15,14 @@ export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
                 <div className="w-full flex flex-col justify-center">
                     <div
                         className="flex flex-col items-center mb-12 md:mb-28">
-                        <div className={sacramento.className}>
-                            <h2 className={"text-pink-400 font-black text-6xl md:text-7xl mb-4 lg:mb-20 "}>Hello!</h2>
+                        <div className={titleFont.className}>
+                            <h2 className={"text-pink-400 font-black text-6xl md:text-7xl mb-4 lg:mb-20 "}>Xin chào!</h2>
                         </div>
-                        <h3 className="mb-2 md:mb-6 text-xl md:text-2xl font-medium">November 28th, 2016 New York,
-                            USA</h3>
+                        <h3 className="mb-2 md:mb-6 text-xl md:text-2xl font-medium">
+                            Ngày 
+                            November 28th, 2016 New York,
+                            USA
+                        </h3>
                         <p className="text-base md:text-xl font-medium text-rose-400 text-center ">
                             Chúng tôi trân trọng mời bạn đến chung vui trong ngày cưới của chúng tôi.
                         </p>
@@ -35,7 +38,7 @@ export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
                                 </div>
                             </div>
                             <div className="flex space-y-2 flex-col">
-                                <div className={sacramento.className}>
+                                <div className={titleFont.className}>
                                     <h3 className="text-right text-4xl lg:text-5xl font-semibold text-pink-600">{coupleInfo.male.fullName}</h3>
                                 </div>
                                 <p className="text-right text-base text-pink-500 lg:leading-8">
@@ -59,7 +62,7 @@ export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
                                 </div>
                             </div>
                             <div className="flex space-y-2 flex-col">
-                                <div className={sacramento.className}>
+                                <div className={titleFont.className}>
                                     <h3 className="text-left text-4xl lg:text-5xl font-semibold text-pink-600">{coupleInfo.female.fullName}</h3>
                                 </div>
                                 <p className="text-left text-base text-pink-500 lg:leading-8">
