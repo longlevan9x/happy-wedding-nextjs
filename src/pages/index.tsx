@@ -13,7 +13,7 @@ import client from "@/libs/mongodb";
 import React, {useState} from "react";
 import {WishesProps} from "@/types/wish";
 import {Thanks} from "@/components/Thanks";
-import {CoupleInfo, WeddingInfo} from "@/data/websiteDataInfo";
+import {CoupleInfo, Metadata, WeddingInfo} from "@/data/websiteDataInfo";
 import Head from "next/head";
 import {HeadMeta} from "@/components/HeadMeta";
 
@@ -50,6 +50,7 @@ export default function Home({wishes}: WishesProps) {
     return (
         <>
             <Head>
+                <title>{Metadata.title}</title>
                 <HeadMeta></HeadMeta>
             </Head>
 

@@ -6,7 +6,6 @@ export function HeadMeta() {
 
     return (
         <>
-            <title>{metadata.title}</title>
             <meta property="og:title" content={metadata.title} key="title"/>
             <link rel="icon" type={metadata.icon.type} href={metadata.icon.src}/>
             <meta name="keywords" content={metadata.keywords}/>
