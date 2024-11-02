@@ -1,14 +1,7 @@
-import {Sacramento} from "next/font/google";
 import Image from "next/image";
 import React, {FormEvent, useState} from "react";
 import {WishesProps} from "@/types/wish";
 import {titleFont} from "@/fonts/font";
-
-const sacramento = Sacramento({
-    subsets: ['latin'],
-    weight: "400",
-    display: 'swap',
-})
 
 export function SendWish({wishes}: WishesProps) {
     const [formState, setFormState] = useState({name: "", emailOrPhone: "", wish: ""});

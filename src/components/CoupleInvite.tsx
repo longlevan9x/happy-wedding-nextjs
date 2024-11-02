@@ -2,7 +2,7 @@ import Image from "next/image";
 import {CoupleModel} from "@/types/couple";
 import {WeddingModel} from "@/types/wedding";
 import {titleFont} from "@/fonts/font";
-import {dayOfWeek, fullDateVN, getDay} from "@/utils/date";
+import {fullDateVN} from "@/utils/date";
 import {WeddingInfo} from "@/data/websiteDataInfo";
 
 interface CoupleInviteProps {
@@ -18,7 +18,8 @@ export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
                     <div
                         className="flex flex-col items-center mb-12 md:mb-28">
                         <div className={titleFont.className}>
-                            <h2 className={"text-pink-400 font-black text-6xl md:text-7xl mb-4 lg:mb-20 "}>Xin chào!</h2>
+                            <h2 className={"text-pink-400 font-black text-6xl md:text-7xl mb-4 lg:mb-20 "}>Xin
+                                chào!</h2>
                         </div>
                         <h3 className="mb-2 md:mb-6 text-xl md:text-2xl font-medium capitalize font-serif">
                             {fullDateVN(WeddingInfo.weddingDate)}

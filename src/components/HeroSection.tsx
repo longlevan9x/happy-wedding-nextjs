@@ -1,15 +1,8 @@
 import Image from "next/image";
-import {Sacramento} from 'next/font/google'
 import {CoupleModel} from "@/types/couple";
 import {WeddingModel} from "@/types/wedding";
 import {getDay, getMonth, getYear} from "@/utils/date";
 import {titleFont} from "@/fonts/font";
-
-const sacramento = Sacramento({
-    subsets: ['latin'],
-    weight: "400",
-    display: 'swap',
-})
 
 interface HeroProps {
     coupleInfo: CoupleModel,

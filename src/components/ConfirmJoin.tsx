@@ -1,11 +1,4 @@
-import {Sacramento} from "next/font/google";
 import {titleFont} from "@/fonts/font";
-
-const sacramento = Sacramento({
-    subsets: ['latin'],
-    weight: "400",
-    display: 'swap',
-})
 
 export function ConfirmJoin() {
     return <>
