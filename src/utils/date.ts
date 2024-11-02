@@ -19,6 +19,8 @@ export const dayOfWeek = (date: string): string => {
     return dayjs(date).locale(LOCALE).format("dddd");
 }
 
-export const fullDate = (date: string): string => {
-    return dayjs(date).locale(LOCALE).format("DD, MMMM, YYYY");
+export const fullDateVN = (date: string): string => {
+    const dates = [dayOfWeek(date), "Ngày " + getDay(date), "Tháng " + getMonth(date), "Năm " + getYear(date)];
+    return dates.join(", ");
+
 }
