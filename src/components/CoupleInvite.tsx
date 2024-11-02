@@ -11,7 +11,7 @@ interface CoupleInviteProps {
 export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
     return (
         <>
-            <section className="my-16 lg:my-32 px-4 lg:px-10 w-full xl:w-4/5 2xl:w-2/3 mx-auto">
+            <section className="my-10 lg:my-32 px-4 lg:px-10 w-full xl:w-4/5 2xl:w-2/3 mx-auto">
                 <div className="w-full flex flex-col justify-center">
                     <div
                         className="flex flex-col items-center mb-12 md:mb-28">

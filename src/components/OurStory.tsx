@@ -78,7 +78,7 @@ export function OurStory() {
                     <div
                         className="w-full lg:w-1/2 relative bg-rose-100 h-full lg:h-screen flex items-center">
                         <div
-                            className="w-full md:w-4/5 lg:w-2/3 mx-auto flex justify-center space-y-2 lg:space-y-10 flex-col px-6 pt-10 pb-8 lg:p-0">
+                            className="w-full lg:w-2/3 mx-auto flex justify-center space-y-2 lg:space-y-10 flex-col px-6 pt-10 pb-8 lg:p-0">
                             <div className="flex items-end space-x-2">
                                 <div className="flex w-10 h-10 md:w-14 md:h-14 text-lg">
                                     <p className="font-semibold">{getDay(stories[currentIndex].date)}</p>
