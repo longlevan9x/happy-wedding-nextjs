@@ -79,8 +79,8 @@ export const Metadata = {
     keywords: "Happy, Wedding, My Wedding, Lễ cưới, My Love, Love u, Love You",
     description: "Chúng tôi trân trọng mời bạn đến chung vui trong ngày cưới của chúng tôi.",
     image: {
-        src: "https://happy-wedding-topaz.vercel.app/images/meta/wedding.png",
-        type: 'image/png',
+        src: "https://happy-wedding-topaz.vercel.app/images/meta/wedding.jpg",
+        type: 'image/jpeg',
         width: 100,
         height: 100
     }
