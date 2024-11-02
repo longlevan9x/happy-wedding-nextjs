@@ -6,7 +6,7 @@ export const CoupleInfo: CoupleModel = {
     male: {
         fullName: "Lê Long",
         avatar: {
-            src: "/images/sliders/1.jpg",
+            src: "/images/galleries/1.jpg",
             with: 500,
             height: 500,
         },
@@ -15,7 +15,7 @@ export const CoupleInfo: CoupleModel = {
     female: {
         fullName: 'Ngô Ngọc',
         avatar: {
-            src: "/images/sliders/2.jpg",
+            src: "/images/galleries/2.jpg",
             with: 500,
             height: 500,
         },
@@ -32,7 +32,7 @@ export const OurStoryInfos: OurStoryModel[] = [
         date: '2024/09/20',
         caption: "Bạn Có Tin Vào Tình Yêu Online Không?",
         image: {
-            src: "/images/sliders/8.jpg",
+            src: "/images/galleries/8.jpg",
             with: 700,
             height: 700,
         },
@@ -42,7 +42,7 @@ export const OurStoryInfos: OurStoryModel[] = [
         date: '2024/10/21',
         caption: "Lời Tỏ Tình Dễ Thương^^",
         image: {
-            src: "/images/sliders/7.jpg",
+            src: "/images/galleries/7.jpg",
             with: 700,
             height: 700,
         },
@@ -52,7 +52,7 @@ export const OurStoryInfos: OurStoryModel[] = [
         date: '2024/11/19',
         caption: "Phút Giây Cầu Hôn",
         image: {
-            src: "/images/sliders/6.jpg",
+            src: "/images/galleries/6.jpg",
             with: 700,
             height: 700,
         },
@@ -62,7 +62,7 @@ export const OurStoryInfos: OurStoryModel[] = [
         date: '2024/12/10',
         caption: "Ngày Lễ Đính Hôn",
         image: {
-            src: "/images/sliders/5.jpg",
+            src: "/images/galleries/5.jpg",
             with: 700,
             height: 700,
         },
@@ -79,9 +79,10 @@ export const Metadata = {
     keywords: "Happy, Wedding, My Wedding, Lễ cưới, My Love, Love u, Love You",
     description: "Chúng tôi trân trọng mời bạn đến chung vui trong ngày cưới của chúng tôi.",
     image: {
-        src: "https://happy-wedding-topaz.vercel.app/images/meta/wedding.jpg",
+        src: "/images/meta/wedding.jpg",
         type: 'image/jpeg',
         width: 100,
         height: 100
-    }
+    },
+    url: "https://happy-wedding-topaz.vercel.app"
 }

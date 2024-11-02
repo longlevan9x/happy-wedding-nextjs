@@ -37,15 +37,15 @@ export function OurStory() {
                             <div className="absolute z-20 bottom-0 left-0 md:left-5 lg:bottom-60 lg:left-20">
                                 <div className="flex flex-col lg:flex-row relative lg:space-x-5">
                                     <Image className="size-10 lg:size-14 relative lg:top-36"
-                                           src="/images/icons/love.png" width={100} height={100}
+                                           src="/icons/love.png" width={100} height={100}
                                            alt="Love">
                                     </Image>
                                     <Image className="size-10 lg:size-16 relative lg:top-20"
-                                           src="/images/icons/love.png" width={100} height={100}
+                                           src="/icons/love.png" width={100} height={100}
                                            alt="Love">
                                     </Image>
                                     <Image className="size-10 lg:size-20 relative lg:top-0"
-                                           src="/images/icons/love.png" width={100} height={100}
+                                           src="/icons/love.png" width={100} height={100}
                                            alt="Love">
                                     </Image>
                                 </div>
@@ -53,7 +53,7 @@ export function OurStory() {
                             </div>
                             <div className="absolute z-20 -top-[4%] -right-[4%] lg:top-28 lg:right-52">
                                 <div className="flex relative">
-                                    <Image className="scale-50 lg:scale-125" src="/images/icons/rose-4.png"
+                                    <Image className="scale-50 lg:scale-125" src="/icons/rose-4.png"
                                            width={100} height={100}
                                            alt="Love">
                                     </Image>

@@ -12,12 +12,14 @@ export function HeadMeta() {
             <meta name="description" content={metadata.description}/>
             <meta name="author" content="Kivie"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <meta property="og:image" content={metadata.image.src}></meta>
+
+            <meta property="og:image" content={metadata.url + metadata.image.src}></meta>
             <meta property="og:image:url" content={metadata.image.src}></meta>
             <meta property="og:image:type" content={metadata.image.type}/>
             <meta property="og:image:width" content="100"></meta>
             <meta property="og:image:height" content="100"></meta>
             <meta property="og:type" content="website"/>
+            <meta property="og:url" content={metadata.url}/>
             <meta
                 property="og:description"
                 content={metadata.description}/>

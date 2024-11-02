@@ -21,7 +21,7 @@ export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
             <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/sliders/1.jpg"
+                        src="/images/galleries/1.jpg"
                         width={700}
                         height={900}
                         alt="Background Image" className="object-cover object-center w-full h-full"/>

@@ -23,7 +23,7 @@ export function Slider() {
                  className={'flex transition-transform duration-700 ease-in-out transform'} style={{'--translateX': currentIndex} as CSSProperties}>
                 {sliders.map((_, i) => (
                     <div className="w-full flex-shrink-0 p-0 h-screen xl:w-1/3 lg:w-1/2 md:w-1/2 sm:w-full slider-image" key={i}>
-                        <Image src={`/images/sliders/${i + 1}.jpg`} alt="Slide 1" className="w-full h-full"
+                        <Image src={`/images/galleries/${i + 1}.jpg`} alt="Slide 1" className="w-full h-full"
                                width={700}
                                height={900}/>
                     </div>
