@@ -26,7 +26,7 @@ export function OurStory() {
         }
     ];
 
-    const [stories, setStories] = useState(_stories);
+    const [stories] = useState(_stories);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const getDay = (date: string) => {

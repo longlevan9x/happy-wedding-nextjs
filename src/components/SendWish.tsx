@@ -21,8 +21,7 @@ export function SendWish({wishes}: WishesProps) {
                 method: "POST",
                 body: JSON.stringify(formState),
             });
-
-            const data = await res.json();
+            await res.json();
             setMessage("Cảm ơn đã gửi lời chúc cho chúng tôi.");
             setFormState({name: "", emailOrPhone: "", wish: ""});
             wishes.unshift(formState);
@@ -30,6 +29,7 @@ export function SendWish({wishes}: WishesProps) {
                 setMessage("");
             }, 3000);
         } catch (e) {
+            console.log(e);
             setMessage("Awww~. Gửi không thành công mất rồi. Hãy thử lại nhé.");
         }
     };

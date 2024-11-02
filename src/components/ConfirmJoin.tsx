@@ -17,7 +17,7 @@ export function ConfirmJoin() {
                         <h1 className="text-white text-4xl sm:text-6xl font-semibold">Are You Attending?</h1>
                     </div>
                     <h2 className="text-gray-100 text-base sm:text-lg text-center">
-                        Please Fill-up the form to notify you that you're attending. Thanks.
+                        Please Fill-up the form to notify you that you&#39;re attending. Thanks.
                     </h2>
                 </div>
                 <div

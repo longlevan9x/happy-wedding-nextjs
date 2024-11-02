@@ -1,10 +1,4 @@
 import client from "@/libs/mongodb";
-import {NextRequest, NextResponse} from "next/server";
-
-export async function POST(request: NextRequest) {
-
-}
-
 import type {NextApiRequest, NextApiResponse} from "next";
 
 type ResponseData = {

@@ -15,7 +15,7 @@ export function Slider() {
                 setCurrentIndex(currentIndex + 1);
             }
         }, 3000);
-    }, [currentIndex, sliders.length]);
+    }, [currentIndex, sliderInPage, sliders.length]);
 
     return <>
         <div className="relative w-full overflow-hidden slider">

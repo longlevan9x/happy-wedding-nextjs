@@ -1,5 +1,5 @@
-import {LoadingInit} from "@/components/LoadingInit";
-import {Slider} from "@/components/Slider";
+// import {LoadingInit} from "@/components/LoadingInit";
+// import {Slider} from "@/components/Slider";
 import Menu from "@/components/Menu";
 import {HeroSection} from "@/components/HeroSection";
 import {CoupleInvite} from "@/components/CoupleInvite";
