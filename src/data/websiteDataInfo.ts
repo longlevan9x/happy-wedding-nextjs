@@ -4,27 +4,27 @@ import {OurStoryModel} from "@/types/ourStory";
 
 export const CoupleInfo: CoupleModel = {
     male: {
-        fullName: "Lê Long",
+        fullName: "Đỗ Trinh",
         avatar: {
-            src: "/images/galleries/1.jpg",
+            src: "/images/avatars/male.jpg",
             with: 500,
             height: 500,
         },
-        description: " Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phồ Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương gia đình."
+        description: "Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phồ Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương gia đình."
     },
     female: {
-        fullName: 'Ngô Ngọc',
+        fullName: 'Lê Phương',
         avatar: {
-            src: "/images/galleries/2.jpg",
+            src: "/images/avatars/female.jpg",
             with: 500,
             height: 500,
         },
-        description: " Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phồ Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương gia đình."
+        description: "Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phồ Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương gia đình."
     }
 };
 
 export const WeddingInfo: WeddingModel = {
-    weddingDate: "2024/12/24"
+    weddingDate: "2024/11/09"
 };
 
 export const OurStoryInfos: OurStoryModel[] = [
