@@ -14,6 +14,8 @@ import React, {useState} from "react";
 import {WishesProps} from "@/types/wish";
 import {Thanks} from "@/components/Thanks";
 import {CoupleInfo, WeddingInfo} from "@/data/websiteDataInfo";
+import Head from "next/head";
+import {HeadMeta} from "@/components/HeadMeta";
 
 const playfair = Playfair({
     subsets: ['vietnamese'],
@@ -41,11 +43,16 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 export default function Home({wishes}: WishesProps) {
+
     const [coupleInfo] = useState(CoupleInfo);
     const [weddingInfo] = useState(WeddingInfo);
 
     return (
         <>
+            <Head>
+                <HeadMeta></HeadMeta>
+            </Head>
+
             <div className={"h-full w-full bg-red-50 relative overflow-hidden " + playfair.className}>
                 {/*<LoadingInit></LoadingInit>*/}
                 <Menu></Menu>

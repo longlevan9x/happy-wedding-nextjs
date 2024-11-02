@@ -69,3 +69,19 @@ export const OurStoryInfos: OurStoryModel[] = [
         content: "“Tiếng trái tim đôi ta đập thật nhanh. Thì thầm lời yêu thương. Ngày tình về chung đôi...” Sau bao nhiêu chờ đợi, cuối cùng ngày vui của chúng ta cũng tới rồi. Cảm ơn vì mình đã luôn là một phần trong cuộc sống của nhau. Em và anh không chỉ là người yêu mà chúng ta còn là tri kỷ. Ngày hôm nay, em sẽ là cô dâu của anh và sau này sẽ là mẹ của các con anh."
     }
 ]
+
+export const Metadata = {
+    title: `Thư mời cưới ${CoupleInfo.male.fullName} & ${CoupleInfo.female.fullName}`,
+    icon: {
+        type: "image/png",
+        src: "/icons/logo_32.png"
+    },
+    keywords: "Happy, Wedding, My Wedding, Lễ cưới, My Love, Love u, Love You",
+    description: "Chúng tôi trân trọng mời bạn đến chung vui trong ngày cưới của chúng tôi.",
+    image: {
+        src: "/images/meta/wedding.png",
+        type: 'image/png',
+        width: 100,
+        height: 100
+    }
+}
