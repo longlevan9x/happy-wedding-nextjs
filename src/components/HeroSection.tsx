@@ -125,9 +125,9 @@ function Slider() {
                             style={{'--translateX': currentIndex} as CSSProperties}
                             key={i}>
                             <Image src={`/images/sliders/${i + 1}.jpg`} alt="Slide 1"
-                                   className="w-full h-full object-cover object-[80%_0%] lg:object-[0%_18%]"
-                                   width={1800}
-                                   height={1800}/>
+                                   className="w-full h-full object-cover object-[80%_0%] lg:object-[0%_10%]"
+                                   width={2200}
+                                   height={2200}/>
                         </div>
                     ))}
                 </div>
