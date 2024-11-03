@@ -17,7 +17,8 @@ export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
             <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
                 <Slider></Slider>
 
-                <div className="relative z-10 flex flex-col justify-center items-center h-full text-center p-2">
+                <div
+                    className="container mx-auto relative z-10 flex flex-col justify-center items-center h-full text-center p-2">
                     <div
                         className={"mb-10 flex items-center space-x-2 text-5xl  " + titleFont.className}>
                         <p className="font-bold leading-tight mb-4 w-28 sm:w-auto">{coupleInfo.male.fullName}</p>
@@ -99,6 +100,10 @@ function Slider() {
         setCurrentIndex(index);
     }
 
+    const changeIndex = (index: number) => {
+        setCurrentIndex(index);
+    }
+
     return (
         <>
             <div className="absolute inset-0 w-full slider-wrapper">
@@ -127,6 +132,14 @@ function Slider() {
                         <ArrowRightIcon className="w-7 h-7 cursor-pointer"></ArrowRightIcon>
                     </button>
                 </div>
+            </div>
+
+            <div className="absolute dot bottom-5 right-5 flex space-x-2 z-30 ">
+                {sliders.map((_, i) => (
+                    <div key={i}
+                         onClick={() => changeIndex(i)}
+                         className={"cursor-pointer w-3 h-3 rounded-full " + (i === currentIndex ? "bg-red-500" : "bg-white")}></div>
+                ))}
             </div>
         </>
     );

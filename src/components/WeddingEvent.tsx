@@ -12,41 +12,45 @@ interface IWeddingEventInfo {
 export function WeddingEvent() {
     return (
         <>
+            <div className=" bg-white w-full">
+                <section className="container mx-auto">
+                    <div className="wedding-event__wrapper w-full py-10 px-4">
+                        <SectionTitle title="Sự kiện cưới"
+                                      quote="...tình yêu không phải là nhìn chằm chằm vào nhau, mà là nhìn chằm chằm về cùng một hướng...">
+                        </SectionTitle>
+                        <div className="w-full mx-auto flex flex-col lg:flex-row mt-14 gap-8 ">
+                            <div
+                                className="w-full lg:w-1/2 lg:sticky top-[20%] h-full flex items-center justify-center mb-8 lg:mb-auto">
+                                <div
+                                    className="we__left-image w-72 lg:w-96 h-full -rotate-6 shadow-[0_0_30px_rgba(208,1,89,0.4)] relative">
+                                    <div className="absolute w-[90%] -top-10 -right-10 bg-transparent">
+                                        <Image
+                                            className="w-full h-full object-cover object-top"
+                                            src="/images/bg/decor_f4.png"
+                                            alt="Love" width={1000} height={1000}></Image>
+                                    </div>
+                                    <div className="absolute -bottom-0 -left-20 w-[40%] bg-transparent">
+                                        <Image
+                                            className="w-full h-full object-cover object-top"
+                                            src="/images/bg/decor_l1.png"
+                                            alt="Love" width={1000} height={1000}></Image>
+                                    </div>
 
-            <div className="wedding-event__wrapper bg-white w-full py-10">
-                <SectionTitle title="Sự kiện cưới"
-                              quote="...tình yêu không phải là nhìn chằm chằm vào nhau, mà là nhìn chằm chằm về cùng một hướng...">
-                </SectionTitle>
-                <div className="w-2/3 mx-auto flex flex-row mt-10 gap-8 ">
-                    <div className="w-1/2 sticky top-[20%] h-full flex items-center justify-center">
-                        <div
-                            className="we__left-image w-[24rem] h-full -rotate-6 shadow-[0_0_30px_rgba(208,1,89,0.4)] relative">
-                            <div className="absolute w-[90%] -top-10 -right-10 bg-transparent">
-                                <Image
-                                    className="w-full h-full object-cover object-top"
-                                    src="/images/bg/decor_f4.png"
-                                    alt="Love" width={1000} height={1000}></Image>
+                                    <Image
+                                        className="w-full h-full object-cover object-top bg-white p-4"
+                                        src="/images/galleries/1.jpg"
+                                        alt="Love" width={700} height={1000}></Image>
+                                </div>
                             </div>
-                            <div className="absolute -bottom-0 -left-20 w-[40%] bg-transparent">
-                                <Image
-                                    className="w-full h-full object-cover object-top"
-                                    src="/images/bg/decor_l1.png"
-                                    alt="Love" width={1000} height={1000}></Image>
+                            <div className="w-full lg:w-1/2 flex flex-col space-y-6">
+                                {
+                                    WeddingEventInfos.filter(w => w.active).map((eventInfo: any, index) => (
+                                        <WeddingEventInfo eventInfo={eventInfo} key={index}></WeddingEventInfo>
+                                    ))}
                             </div>
-
-                            <Image
-                                className="w-full h-full object-cover object-top bg-white p-4"
-                                src="/images/galleries/1.jpg"
-                                alt="Love" width={700} height={1000}></Image>
                         </div>
                     </div>
-                    <div className="w-1/2 flex flex-col space-y-6">
-                        {
-                            WeddingEventInfos.filter(w => w.active).map((eventInfo: any, index) => (
-                                <WeddingEventInfo eventInfo={eventInfo} key={index}></WeddingEventInfo>
-                            ))}
-                    </div>
-                </div>
+                </section>
             </div>
         </>
     );
@@ -55,19 +59,19 @@ export function WeddingEvent() {
 function WeddingEventInfo({eventInfo}: IWeddingEventInfo) {
     return (
         <>
-            <div className="w-full shadow-[0_0_30px_rgba(0,0,0,0.1)] rounded-lg h-72">
+            <div className="w-full shadow-[0_0_30px_rgba(0,0,0,0.1)] rounded-lg lg:h-72">
                 <div className="font-serif uppercase text-center pt-5 text-xl">
                     <h1>{eventInfo.title}</h1>
                 </div>
-                <div className="p-6 flex gap-8 font-medium text-xl">
-                    <div className="w-1/3">
-                        <div className="w-48 h-48">
+                <div className="p-6 flex gap-4 lg:gap-8 font-medium text-xl flex-col lg:flex-row">
+                    <div className="w-full lg:w-1/3">
+                        <div className="max-w-full lg:w-48 lg:h-48">
                             <Image className="w-full h-full object-cover object-top rounded-md"
-                                   src={eventInfo.image.src} alt="Love" width={300}
-                                   height={300}></Image>
+                                   src={eventInfo.image.src} alt="Love" width={1000}
+                                   height={1000}></Image>
                         </div>
                     </div>
-                    <div className="w-2/3 flex flex-col justify-between pb-2">
+                    <div className="w-full lg:w-2/3 flex flex-col justify-between pb-2">
                         <div className="w-full flex flex-col space-y-2">
                             <div className="flex space-x-4">
                                 <div className="flex items-center space-x-1">
@@ -86,7 +90,7 @@ function WeddingEventInfo({eventInfo}: IWeddingEventInfo) {
                                 <p>{eventInfo.address}</p>
                             </div>
                         </div>
-                        <div>
+                        <div className="mt-7 lg:mt-auto">
                             <a className="py-2 px-4 bg-red-400 outline-0 hover:bg-red-500 text-white rounded-full"
                                href={eventInfo.mapAddress}
                                target="_blank">Xem bản đồ</a>

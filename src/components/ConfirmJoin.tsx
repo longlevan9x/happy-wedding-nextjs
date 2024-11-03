@@ -11,9 +11,7 @@ export function ConfirmJoin() {
                         <h1 className="text-white text-4xl sm:text-6xl font-semibold">Xác nhận tham dự.</h1>
                     </div>
                     <h2 className="text-gray-100 text-base sm:text-lg text-center">
-                        Chúng tôi rất mong biết bạn có tham dự hay không.
-                        Xin vui lòng điền vào biểu mẫu để xác nhận.
-                        Cảm ơn!
+                        Xin vui lòng điền vào biểu mẫu để thông báo cho chúng tôi biết rằng bạn sẽ tham dự. Cảm ơn!
                     </h2>
                 </div>
                 <div
