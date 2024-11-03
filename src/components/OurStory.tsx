@@ -21,7 +21,7 @@ export function OurStory() {
                                 <div
                                     className="w-full h-full flex flex-row lg:flex-col items-center sm:items-end justify-center space-x-8 md:space-x-16 lg:space-x-0 lg:space-y-10">
                                     {stories.map((story, i) => (
-                                        <div className=" z-30 flex flex-col items-center cursor-pointer justify-center"
+                                        <div className="z-30 flex flex-col items-center cursor-pointer justify-center"
                                              key={i}>
                                             <div className="w-10 h-10 rounded-full">
                                                 <Image
@@ -33,45 +33,46 @@ export function OurStory() {
                                         </div>
                                     ))}
                                 </div>
-
                             </div>
 
-                            <div className="heart-pain">
-                                <div className="absolute z-20 bottom-0 left-0 md:left-5 lg:bottom-60 lg:left-20">
-                                    <div className="flex flex-col lg:flex-row relative lg:space-x-5">
-                                        <Image className="size-10 lg:size-14 relative lg:top-36"
-                                               src="/icons/love.png" width={100} height={100}
-                                               alt="Love">
-                                        </Image>
-                                        <Image className="size-10 lg:size-16 relative lg:top-20"
-                                               src="/icons/love.png" width={100} height={100}
-                                               alt="Love">
-                                        </Image>
-                                        <Image className="size-10 lg:size-20 relative lg:top-0"
-                                               src="/icons/love.png" width={100} height={100}
-                                               alt="Love">
-                                        </Image>
-                                    </div>
-
-                                </div>
-                                <div className="absolute z-20 -top-[4%] -right-[4%] lg:top-28 lg:right-52">
-                                    <div className="flex relative">
-                                        <Image className="scale-50 lg:scale-125" src="/icons/rose-4.png"
-                                               width={100} height={100}
-                                               alt="Love">
-                                        </Image>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="our-story__image w-full h-full flex flex-col items-center justify-center">
-                                <div className="w-full h-full lg:w-3/5 lg:h-3/5 ">
+                            <div
+                                className="our-story__image w-full h-full flex flex-col items-center justify-center">
+                                <div
+                                    className="w-full h-full lg:w-[500px] lg:h-[500px] 2xl:w-[650px] 2xl:h-[650px] relative">
                                     <Image
                                         className="object-cover object-center w-full h-full  lg:rounded-full"
                                         src={stories[currentIndex].image.src}
                                         width={stories[currentIndex].image.with}
                                         height={stories[currentIndex].image.height}
                                         alt="image"/>
+
+                                    <div
+                                        className="absolute z-20 bottom-0 left-0 md:left-5 lg:bottom-0 lg:left-10">
+                                        <div className="flex flex-col lg:flex-row relative lg:space-x-5">
+                                            <Image className="size-10 lg:size-14 relative lg:top-0 lg:right-10"
+                                                   src="/icons/love.png" width={100} height={100}
+                                                   alt="Love">
+                                            </Image>
+                                            <Image className="size-10 lg:size-16 relative lg:top-10 lg:right-10"
+                                                   src="/icons/love.png" width={100} height={100}
+                                                   alt="Love">
+                                            </Image>
+                                            <Image className="size-10 lg:size-20 relative lg:top-20 lg:right-4"
+                                                   src="/icons/love.png" width={100} height={100}
+                                                   alt="Love">
+                                            </Image>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="absolute z-20 -top-[4%] -right-[4%] lg:top-0 lg:right-10">
+                                        <div className="flex relative">
+                                            <Image className="scale-50 lg:scale-125" src="/icons/rose-4.png"
+                                                   width={100} height={100}
+                                                   alt="Love">
+                                            </Image>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div
                                     className="lg:hidden absolute z-10 border-opacity-50 border-pink-300 border-[3px] border-double w-[90%] h-[90%] m-10"></div>
