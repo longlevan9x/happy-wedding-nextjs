@@ -12,7 +12,7 @@ interface IWeddingEventInfo {
 export function WeddingEvent() {
     return (
         <>
-            <div className=" bg-white w-full">
+            <div className=" bg-white w-full" id="website-event">
                 <section className="container mx-auto">
                     <div className="wedding-event__wrapper w-full py-10 px-4">
                         <SectionTitle title="Sự kiện cưới"

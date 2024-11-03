@@ -13,7 +13,7 @@ interface CoupleInviteProps {
 export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
     return (
         <>
-            <section className="container mx-auto">
+            <section id="couple" className="container mx-auto">
                 <div className="my-10 lg:my-32 px-4 lg:px-10 w-full xl:w-4/5  mx-auto">
                     <div className="w-full flex flex-col justify-center">
                         <div

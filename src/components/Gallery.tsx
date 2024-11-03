@@ -7,8 +7,7 @@ export function Gallery() {
 
     return (
         <>
-            <section className="container mx-auto">
-
+            <section className="container mx-auto" id="album">
                 <div className="w-full mx-auto py-20 px-3">
                     <div className="flex flex-col w-full mb-10 lg:mb-20">
                         <div className={"flex flex-col items-center mb-6 " + titleFont.className}>

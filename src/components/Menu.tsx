@@ -1,8 +1,37 @@
-// src/Menu.js
 import React, {useState} from 'react';
 import Image from "next/image";
 
+interface NavModel {
+    title: string;
+    href?: string;
+}
+
 const Menu = () => {
+    const _navs: NavModel[] = [
+        {
+            title: "Trang chủ",
+            href: "home",
+        },
+        {
+            title: "Cặp đôi",
+            href: "couple",
+        },
+        {
+            title: "Sự kiện cưới",
+            href: "website-event"
+        },
+        {
+            title: "Chuyện tình yêu",
+            href: "our-story"
+        },
+        {
+            title: "Album ảnh cưới",
+            href: "album",
+        }
+    ]
+
+    const [navs] = useState<NavModel[]>(_navs);
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -10,17 +39,17 @@ const Menu = () => {
     };
 
     return (
-        <div className="fixed w-full h-16 bg-transparent text-white z-20">
+        <div className="fixed w-full h-16 bg-transparent text-white z-40">
             <nav className="container mx-auto flex justify-between items-center p-5">
                 <div className="text-lg font-bold flex items-center justify-center space-x-2">
                     <Image src="/icons/logo_64.png" alt="Wedding" width={32} height={32}></Image>
                     <p>Wedding</p>
                 </div>
                 <div className="hidden md:flex space-x-4">
-                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Trang chủ</a>
-                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Cặp đôi</a>
-                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Sự kiện cưới</a>
-                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Album ảnh cưới</a>
+                    {navs.map((nav: NavModel, i) => (
+                        <a key={i} href={"#" + nav.href}
+                           className="cursor-pointer hover:bg-pink-600 px-3 py-2 rounded">{nav.title}</a>
+                    ))}
                 </div>
                 <div className="md:hidden">
                     <button onClick={toggleMenu} className="focus:outline-none">

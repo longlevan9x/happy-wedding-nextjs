@@ -14,7 +14,7 @@ interface HeroProps {
 export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
     return (
         <>
-            <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+            <div id="home" className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
                 <Slider></Slider>
 
                 <div
