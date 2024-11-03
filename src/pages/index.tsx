@@ -58,7 +58,7 @@ export default function Home({wishes}: WishesProps) {
             </Head>
 
             <div className={"h-full w-full bg-red-50 relative " + playfair.className}>
-                {/*<LoadingInit></LoadingInit>*/}
+                <LoadingInit></LoadingInit>
                 <Menu></Menu>
                 <HeroSection coupleInfo={coupleInfo} weddingInfo={weddingInfo}></HeroSection>
                 <CoupleInvite coupleInfo={coupleInfo} weddingInfo={weddingInfo}></CoupleInvite>
