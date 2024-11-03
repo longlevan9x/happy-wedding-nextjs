@@ -6,7 +6,8 @@ import {WeddingEventInfoModel} from "@/types/WeddingEventInfo";
 import React from "react";
 
 interface IWeddingEventInfo {
-    eventInfo: WeddingEventInfoModel
+    eventInfo: WeddingEventInfoModel,
+    index: number
 }
 
 export function WeddingEvent() {
@@ -20,7 +21,7 @@ export function WeddingEvent() {
                         </SectionTitle>
                         <div className="w-full mx-auto flex flex-col lg:flex-row mt-14 gap-8 ">
                             <div
-                                className="w-full lg:w-1/2 lg:sticky top-[10%] 2xl:top-[20%] h-full flex items-center justify-center mb-8 lg:mb-auto">
+                                className="w-full lg:w-1/2 lg:sticky top-[10%] 2xl:top-[20%] h-full flex items-center justify-center mb-8 lg:mb-auto transition-all duration-1000 ease-linear animated animate__fadeInRightBig opacity-0">
                                 <div
                                     className="we__left-image w-72 lg:w-96 h-full -rotate-6 shadow-[0_0_30px_rgba(208,1,89,0.4)] relative">
                                     <div className="absolute w-[90%] -top-10 -right-10 bg-transparent">
@@ -45,7 +46,8 @@ export function WeddingEvent() {
                             <div className="w-full lg:w-1/2 flex flex-col space-y-6">
                                 {
                                     WeddingEventInfos.filter(w => w.active).map((eventInfo: any, index) => (
-                                        <WeddingEventInfo eventInfo={eventInfo} key={index}></WeddingEventInfo>
+                                        <WeddingEventInfo eventInfo={eventInfo} key={index}
+                                                          index={index}></WeddingEventInfo>
                                     ))}
                             </div>
                         </div>
@@ -56,10 +58,11 @@ export function WeddingEvent() {
     );
 }
 
-function WeddingEventInfo({eventInfo}: IWeddingEventInfo) {
+function WeddingEventInfo({eventInfo, index}: IWeddingEventInfo) {
     return (
         <>
-            <div className="w-full shadow-[0_0_30px_rgba(0,0,0,0.1)] rounded-lg lg:h-72">
+            <div
+                className={`w-full shadow-[0_0_30px_rgba(0,0,0,0.1)] rounded-lg lg:h-72 animated animate__fadeInRightBig transition-all duration-1000 ease-linear animate__delay-${index + 1}s opacity-0`}>
                 <div className="font-serif uppercase text-center pt-5 text-xl">
                     <h1>{eventInfo.title}</h1>
                 </div>

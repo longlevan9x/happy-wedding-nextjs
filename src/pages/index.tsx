@@ -52,7 +52,6 @@ export default function Home({wishes}: WishesProps) {
     const [weddingInfo] = useState(WeddingInfo);
 
     useEffect(() => {
-
         setTimeout(() => {
             setIsLoading(false)
         }, 3000);
@@ -61,21 +60,25 @@ export default function Home({wishes}: WishesProps) {
         const observer = new IntersectionObserver(intersections => {
             intersections.forEach((entry) => {
                 if (entry.intersectionRatio === 1) {
-                    entry.target.classList.toggle('animate__animated', entry.isIntersecting);
+                    entry.target.classList.toggle("animate__animated", entry.isIntersecting);
+                    // entry.target.classList.toggle("animate__fadeInDown", entry.isIntersecting);
+
                     entry.target.classList.remove('opacity-0');
-                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.toggle('opacity-100', entry.isIntersecting);
                 } else {
                     // entry.target.classList.remove('animate__animated');
                 }
 
-                // console.log("boundingClientRect" ,entry.boundingClientRect)
-                // console.log("intersectionRatio" , entry.intersectionRatio)
+                // console.log("boundingClientRect", entry.boundingClientRect)
+                // console.log("intersectionRatio", entry.intersectionRatio)
                 // console.log("intersectionRect", entry.intersectionRect)
                 // console.log("isIntersecting", entry.isIntersecting)
                 // console.log("rootBounds", entry.rootBounds)
+                // console.log("target", entry.target)
             });
         }, {
-            threshold: [1],
+            threshold: [0, 0.25, 0.5, 0.75, 1],
+            rootMargin: "-50px"
         });
 
         setTimeout(() => {
@@ -104,7 +107,7 @@ export default function Home({wishes}: WishesProps) {
                             <WeddingEvent></WeddingEvent>
                             <WebsiteInfo></WebsiteInfo>
                             <OurStory></OurStory>
-                            <ConfirmJoin></ConfirmJoin>
+                            {/*<ConfirmJoin></ConfirmJoin>*/}
                             <Gallery></Gallery>
                             <SendWish wishes={wishes}></SendWish>
                             <Thanks></Thanks>

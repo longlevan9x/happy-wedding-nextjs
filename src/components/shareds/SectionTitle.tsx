@@ -17,7 +17,7 @@ export function SectionTitle({title, quote, showDecor}: SectionTitleProps) {
             <div
                 id={title}
                 className={"w-full min-h-40 text-center flex flex-col items-center justify-center "}>
-                <div className={titleFont.className + " animated animate__slideInDown animate__delay-1s opacity-0"}>
+                <div className={titleFont.className + " animated animate__fadeInDown animate__delay-1s  opacity-0"}>
                     <h1 className="text-pink-400 font-black text-6xl md:text-7xl mb-6 ">{title}</h1>
                 </div>
                 {
