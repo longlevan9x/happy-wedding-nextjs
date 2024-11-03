@@ -105,7 +105,7 @@ export default function Home({wishes}: WishesProps) {
                         <>
                             <CoupleInvite coupleInfo={coupleInfo} weddingInfo={weddingInfo}></CoupleInvite>
                             <WeddingEvent></WeddingEvent>
-                            <WebsiteInfo></WebsiteInfo>
+                            {/*<WebsiteInfo></WebsiteInfo>*/}
                             <OurStory></OurStory>
                             {/*<ConfirmJoin></ConfirmJoin>*/}
                             <Gallery></Gallery>
