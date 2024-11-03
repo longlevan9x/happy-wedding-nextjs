@@ -28,7 +28,7 @@ export function Gallery() {
                         {
                             galleries.map((_, index) => (
                                 <Image key={index}
-                                       className={`animated animate__fadeInUpBig transition-all duration-1000 ease-linear animate__delay-${index + 1}s opacity-0 w-full h-full`}
+                                       className={`  transition-all duration-1000 ease-linear animate__delay-${index + 1}s  w-full h-full`}
                                        src={`/images/galleries/${index + 1}.jpg`}
                                        width={500} height={500}
                                        alt="Love">

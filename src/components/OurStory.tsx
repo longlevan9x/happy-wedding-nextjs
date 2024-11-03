@@ -4,14 +4,39 @@ import {OurStoryInfos} from "@/data/websiteDataInfo";
 import {OurStoryModel} from "@/types/ourStory";
 import {getDay, getMonth, getYear} from "@/utils/date";
 import {SectionTitle} from "@/components/shareds/SectionTitle";
+import {ArrowLeftIcon, ArrowRightIcon} from "@heroicons/react/24/outline";
 
 export function OurStory() {
     const [stories] = useState(OurStoryInfos as OurStoryModel[]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [imageClassAnimated, setImageClassAnimated] = useState<string>("");
+
+    const prev = () => {
+        setCurIndex(currentIndex - 1);
+    }
+
+    const next = () => {
+        setCurIndex(currentIndex + 1);
+    }
+
+    const setCurIndex = (index: number) => {
+        if (index < 0) {
+            index = stories.length - 1;
+        }
+        if (index > stories.length - 1) {
+            index = 0;
+        }
+        setImageClassAnimated("animate__animated  animate__zoomOut");
+        setTimeout(() => {
+            setCurrentIndex(index);
+            setImageClassAnimated("");
+            setImageClassAnimated("animate__animated  animate__zoomIn");
+        }, 500);
+    }
 
     return (
         <>
-            <div className="w-full" id="our-story">
+            <div className="w-full overflow-x-hidden" id="our-story">
                 <SectionTitle title="Chuyện tình yêu"></SectionTitle>
                 <div className="w-full h-full md:h-screen relative our-story">
                     <div className="flex flex-col lg:flex-row h-full lg:h-auto">
@@ -38,9 +63,9 @@ export function OurStory() {
                             <div
                                 className="our-story__image w-full h-full flex flex-col items-center justify-center">
                                 <div
-                                    className="w-full h-full lg:w-[500px] lg:h-[500px] 2xl:w-[650px] 2xl:h-[650px] relative">
+                                    className="w-full h-full lg:w-[500px] lg:h-[500px] 2xl:w-[650px] 2xl:h-[650px] relative animated opacity-0">
                                     <Image
-                                        className="object-cover object-center w-full h-full  lg:rounded-full"
+                                        className={"object-cover object-center w-full h-full  lg:rounded-full transition-all duration-700 ease-linear " + imageClassAnimated}
                                         src={stories[currentIndex].image.src}
                                         width={stories[currentIndex].image.with}
                                         height={stories[currentIndex].image.height}
@@ -83,20 +108,30 @@ export function OurStory() {
                             className="w-full lg:w-1/2 relative bg-rose-100 h-full lg:h-screen flex items-center">
                             <div
                                 className="w-full lg:w-2/3 mx-auto flex justify-center space-y-2 lg:space-y-10 flex-col px-6 pt-10 pb-8 lg:p-0">
-                                <div className="flex items-end space-x-2">
-                                    <div className="flex w-10 h-10 md:w-14 md:h-14 text-lg">
+                                <div className="flex items-end space-x-2 animated opacity-0">
+                                    <div className="flex w-11 h-11 md:w-14 md:h-14 text-lg">
                                         <p className="font-semibold">{getDay(stories[currentIndex].date)}</p>
                                         <p className="w-[1px] bg-red-500 transform rotate-45"></p>
                                         <p className="mt-5 font-semibold flex items-end">{getMonth(stories[currentIndex].date)}</p>
                                     </div>
-                                    <div className="text-3xl md:text-4xl">
+                                    <div className="text-2xl sm:text-3xl md:text-4xl">
                                         {getYear(stories[currentIndex].date)}
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col space-y-2 md:space-y-10">
-                                    <p className="text-3xl md:text-6xl font-bold">{stories[currentIndex].caption}</p>
-                                    <p className="text-xl font-medium leading-8 text-justify">{stories[currentIndex].content}</p>
+                                <div className="flex flex-col space-y-2 md:space-y-10 max-sm:pt-5">
+                                    <p className="text-2xl sm:text-3xl md:text-6xl font-bold animated opacity-0">{stories[currentIndex].caption}</p>
+                                    <p className="text-xl font-medium leading-8 text-justify animated opacity-0">{stories[currentIndex].content}</p>
+                                </div>
+
+                                <div className="max-sm:absolute max-sm:top-9 max-sm:right-3 flex space-x-0 cursor-pointer">
+                                    <div><ArrowLeftIcon
+                                        onClick={prev}
+                                        className="p-2 max-sm:w-11 max-sm:h-11 w-14 h-14 hover:border hover:border-black"></ArrowLeftIcon></div>
+                                    <div><ArrowRightIcon
+                                        onClick={next}
+                                        className="p-2 max-sm:w-11 max-sm:h-11 w-14 h-14 hover:border hover:border-black"></ArrowRightIcon>
+                                    </div>
                                 </div>
                             </div>
                         </div>

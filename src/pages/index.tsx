@@ -61,7 +61,9 @@ export default function Home({wishes}: WishesProps) {
             intersections.forEach((entry) => {
                 if (entry.intersectionRatio === 1) {
                     entry.target.classList.toggle("animate__animated", entry.isIntersecting);
-                    // entry.target.classList.toggle("animate__fadeInDown", entry.isIntersecting);
+                    if (!entry.target.className.includes("animated__")) {
+                        entry.target.classList.toggle("animate__fadeInDown", entry.isIntersecting);
+                    }
 
                     entry.target.classList.remove('opacity-0');
                     entry.target.classList.toggle('opacity-100', entry.isIntersecting);

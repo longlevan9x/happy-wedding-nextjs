@@ -40,7 +40,7 @@ function Quote({quote}: QuoteProps) {
         return <></>
     }
 
-    return <div className="text-center pt-8">
+    return <div className="text-center pt-8 animated">
         <q className="italic md:text-lg lg:text-xl">
             {quote}
         </q>

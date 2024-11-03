@@ -40,7 +40,7 @@ export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
                                     </div>
                                 </div>
                                 <div
-                                    className="flex space-y-2 flex-col animated animate__fadeIn animate__delay-2s opacity-0">
+                                    className="flex space-y-2 flex-col animated animate__fadeIn animate__delay-1s opacity-0">
                                     <div className={titleFont.className}>
                                         <h3 className="text-right text-4xl lg:text-5xl font-semibold text-pink-600">{coupleInfo.male.fullName}</h3>
                                     </div>
@@ -68,7 +68,7 @@ export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
                                     </div>
                                 </div>
                                 <div
-                                    className="flex space-y-2 flex-col animated animate__fadeIn animate__delay-2s opacity-0">
+                                    className="flex space-y-2 flex-col animated animate__fadeIn animate__delay-1s opacity-0">
                                     <div className={titleFont.className}>
                                         <h3 className="text-left text-4xl lg:text-5xl font-semibold text-pink-600">{coupleInfo.female.fullName}</h3>
                                     </div>
