@@ -19,13 +19,13 @@ export function FixedIcon() {
         <>
             <div className="fixed bottom-24 right-6 space-y-5">
                 <a href="#send-wish">
-                    <div className="p-3 rounded-full z-50 bg-pink-500 cursor-pointer" title="Gửi lời chúc">
+                    <div className="p-3 rounded-full z-50 bg-pink-500 hover:bg-pink-600 hover:scale-110 cursor-pointer" title="Gửi lời chúc">
                         <ChatBubbleLeftIcon
                             className="w-5 h-5 text-white"></ChatBubbleLeftIcon>
                     </div>
                 </a>
 
-                <div className="p-3 rounded-full z-50 bg-pink-500 cursor-pointer" onClick={() => playMp3(isPlayMp3)}
+                <div className="p-3 rounded-full z-50 bg-pink-500 hover:bg-pink-600 hover:scale-110 cursor-pointer" onClick={() => playMp3(isPlayMp3)}
                      title="Phát nhạc">
                     {
                         isPlayMp3 && <SpeakerWaveIcon className="w-5 h-5 text-white"></SpeakerWaveIcon>

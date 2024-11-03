@@ -14,7 +14,8 @@ interface HeroProps {
 export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
     return (
         <>
-            <div id="home" className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+            <div id="home"
+                 className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
                 <Slider></Slider>
 
                 <div
@@ -122,7 +123,7 @@ function Slider() {
                 </div>
                 <div className="absolute inset-0 bg-black opacity-40"></div>
 
-                <div className="move hidden md:block">
+                <div className="move max-sm:w-28 max-sm:absolute max-sm:bottom-14 max-sm:-left-5 max-sm:rotate-90">
                     <button onClick={prev}
                             className="z-30 absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer bg-transparent p-2 rounded-full hover:border">
                         <ArrowLeftIcon className="w-7 h-7 cursor-pointer"></ArrowLeftIcon>
