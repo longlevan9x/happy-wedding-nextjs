@@ -20,7 +20,7 @@ export function WeddingEvent() {
                         </SectionTitle>
                         <div className="w-full mx-auto flex flex-col lg:flex-row mt-14 gap-8 ">
                             <div
-                                className="w-full lg:w-1/2 lg:sticky top-[20%] h-full flex items-center justify-center mb-8 lg:mb-auto">
+                                className="w-full lg:w-1/2 lg:sticky top-[10%] 2xl:top-[20%] h-full flex items-center justify-center mb-8 lg:mb-auto">
                                 <div
                                     className="we__left-image w-72 lg:w-96 h-full -rotate-6 shadow-[0_0_30px_rgba(208,1,89,0.4)] relative">
                                     <div className="absolute w-[90%] -top-10 -right-10 bg-transparent">

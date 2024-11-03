@@ -17,8 +17,10 @@ const Menu = () => {
                     <p>Wedding</p>
                 </div>
                 <div className="hidden md:flex space-x-4">
-                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Home</a>
-                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Story</a>
+                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Trang chủ</a>
+                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Cặp đôi</a>
+                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Sự kiện cưới</a>
+                    <a href="#" className="cursor-pointer hover:bg-gray-700 px-3 py-2 rounded">Album ảnh cưới</a>
                 </div>
                 <div className="md:hidden">
                     <button onClick={toggleMenu} className="focus:outline-none">
