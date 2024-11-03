@@ -6,21 +6,25 @@ export const CoupleInfo: CoupleModel = {
     male: {
         fullName: "Đỗ Trinh",
         avatar: {
-            src: "/images/avatars/male.jpg",
+            src: "/images/avatars/male_1_1.jpg",
             with: 500,
             height: 500,
         },
-        description: "Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phồ Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương gia đình."
+        description: "Là một chàng trai hiền lành, chu đáo và đam mê nấu ăn. Sự quan tâm chân thành của anh dành cho mọi người khiến anh luôn được yêu quý và trân trọng.",
+        address: "Số 21B, xóm Sung, thôn Đống, Cao Viên, Thanh Oai, Hà Nội",
+        mapAddress: "https://maps.app.goo.gl/qvcKc5QoV1A27Hd57",
     },
     female: {
         fullName: 'Lê Phương',
         avatar: {
-            src: "/images/avatars/female.jpg",
+            src: "/images/avatars/female_1_1.jpg",
             with: 500,
             height: 500,
         },
-        description: "Là bác sĩ nha khoa hiện đang công tác tại một phòng khám nha khoa ở Quận 1 thành phồ Hồ Chí Minh. Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và yêu thương gia đình."
-    }
+        description: "Là một cô gái đáng yêu, nội tâm sâu sắc và luôn yêu thương gia đình. Sự dịu dàng, biết lắng nghe và chân thành của cô khiến mọi người cảm thấy gần gũi, ấm áp.",
+        address: "Số nhà 27, đường 3, Hưng giáo, Tam Hưng, Thanh Oai, Hà Nội",
+        mapAddress: "https://maps.app.goo.gl/MQ2mr7zchtMsPgED7"
+    },
 };
 
 export const WeddingInfo: WeddingModel = {
@@ -86,3 +90,64 @@ export const Metadata = {
     },
     url: "https://happy-wedding-topaz.vercel.app"
 }
+
+export const WeddingEventInfos = [
+    {
+        title: "LỄ CƯỚI NHÀ NỮ",
+        date: "2024/11/09",
+        time: "16:30",
+        address: `Tại gia đình nhà gái - ${CoupleInfo.female.address}`,
+        image: {
+            src: "/images/events/1.jpg",
+            type: 'image/jpeg',
+            width: 300,
+            height: 300
+        },
+        mapAddress: CoupleInfo.female.mapAddress,
+        active: true
+
+    },
+    {
+        title: "TIỆC CƯỚI NHÀ GÁI",
+        date: "2024/11/10",
+        time: "09:00",
+        address: `Tại gia đình nhà gái - ${CoupleInfo.female.address}`,
+        image: {
+            src: "/images/events/2.jpg",
+            type: 'image/jpeg',
+            width: 300,
+            height: 300
+        },
+        mapAddress: CoupleInfo.female.mapAddress,
+        active: false
+
+    },
+    {
+        title: "LỄ CƯỚI NHÀ TRAI",
+        date: "2024/11/10",
+        time: "14:00",
+        address: `Tại gia đình nhà trai - ${CoupleInfo.male.address}`,
+        image: {
+            src: "/images/events/3.jpg",
+            type: 'image/jpeg',
+            width: 300,
+            height: 300
+        },
+        mapAddress: CoupleInfo.male.mapAddress,
+        active: true
+    },
+    {
+        title: "TIỆC CƯỚI NHÀ TRAI",
+        date: "2024/11/09",
+        time: "16:30",
+        address: `Tại gia đình nhà trai - ${CoupleInfo.male.address}`,
+        image: {
+            src: "/images/events/4.jpg",
+            type: 'image/jpeg',
+            width: 300,
+            height: 300
+        },
+        mapAddress: CoupleInfo.male.mapAddress,
+        active: true
+    }
+];

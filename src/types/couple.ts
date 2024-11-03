@@ -1,3 +1,5 @@
+import {ImageModel} from "@/types/Image";
+
 export interface CoupleModel {
     male: PersonModel;
     female: PersonModel;
@@ -6,11 +8,7 @@ export interface CoupleModel {
 export interface PersonModel {
     fullName: string;
     description?: string;
-    avatar: AvatarModel;
-}
-
-export interface AvatarModel {
-    src: string;
-    with: number;
-    height: number;
+    avatar: ImageModel;
+    address?: string;
+    mapAddress?: string;
 }

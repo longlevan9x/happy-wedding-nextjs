@@ -18,6 +18,7 @@ import Head from "next/head";
 import {HeadMeta} from "@/components/HeadMeta";
 import {Gallery} from "@/components/Gallery";
 import { LoadingInit } from "@/components/LoadingInit";
+import {WeddingEvent} from "@/components/WeddingEvent";
 
 const playfair = Playfair({
     subsets: ['vietnamese'],
@@ -56,11 +57,12 @@ export default function Home({wishes}: WishesProps) {
                 <HeadMeta></HeadMeta>
             </Head>
 
-            <div className={"h-full w-full bg-red-50 relative overflow-hidden " + playfair.className}>
-                <LoadingInit></LoadingInit>
+            <div className={"h-full w-full bg-red-50 relative " + playfair.className}>
+                {/*<LoadingInit></LoadingInit>*/}
                 <Menu></Menu>
                 <HeroSection coupleInfo={coupleInfo} weddingInfo={weddingInfo}></HeroSection>
                 <CoupleInvite coupleInfo={coupleInfo} weddingInfo={weddingInfo}></CoupleInvite>
+                <WeddingEvent></WeddingEvent>
                 <WebsiteInfo></WebsiteInfo>
                 <OurStory></OurStory>
                 <ConfirmJoin></ConfirmJoin>
@@ -68,6 +70,8 @@ export default function Home({wishes}: WishesProps) {
                 <SendWish wishes={wishes}></SendWish>
                 <Thanks></Thanks>
             </div>
+
+
         </>
     );
 }

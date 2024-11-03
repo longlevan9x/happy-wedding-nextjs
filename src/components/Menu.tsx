@@ -10,7 +10,7 @@ const Menu = () => {
     };
 
     return (
-        <div className="fixed w-screen h-16 bg-transparent text-white z-20">
+        <div className="fixed w-full h-16 bg-transparent text-white z-20">
             <nav className="container mx-auto flex justify-between items-center p-5">
                 <div className="text-lg font-bold flex items-center justify-center space-x-2">
                     <Image src="/icons/logo_64.png" alt="Wedding" width={32} height={32}></Image>

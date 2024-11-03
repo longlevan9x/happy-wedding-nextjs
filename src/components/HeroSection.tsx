@@ -3,6 +3,8 @@ import {CoupleModel} from "@/types/couple";
 import {WeddingModel} from "@/types/wedding";
 import {getDay, getMonth, getYear} from "@/utils/date";
 import {titleFont} from "@/fonts/font";
+import {CSSProperties, useState} from "react";
+import {ArrowLeftIcon, ArrowRightIcon} from "@heroicons/react/24/outline";
 
 interface HeroProps {
     coupleInfo: CoupleModel,
@@ -13,14 +15,7 @@ export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
     return (
         <>
             <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
-                <div className="absolute inset-0">
-                    <Image
-                        src="/images/galleries/1.jpg"
-                        width={700}
-                        height={900}
-                        alt="Background Image" className="object-cover object-center w-full h-full"/>
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                </div>
+                <Slider></Slider>
 
                 <div className="relative z-10 flex flex-col justify-center items-center h-full text-center p-2">
                     <div
@@ -76,6 +71,61 @@ export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
                     <div
                         className="relative top-3 text-2xl font-bold animate__animated animate__slideInDown animate__infinite">.
                     </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+function Slider() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [sliders] = useState<number[]>(Array.from({length: 3}).map((_, i) => i + 1));
+    const prev = () => {
+        setCurIndex(currentIndex - 1);
+    }
+
+    const next = () => {
+        setCurIndex(currentIndex + 1);
+    }
+
+    const setCurIndex = (index: number) => {
+        if (index < 0) {
+            index = sliders.length - 1;
+        }
+        if (index > sliders.length - 1) {
+            index = 0;
+        }
+
+        setCurrentIndex(index);
+    }
+
+    return (
+        <>
+            <div className="absolute inset-0 w-full slider-wrapper">
+                <div className={'flex transition-transform duration-700 ease-in-out transform'}>
+                    {sliders.map((_, i) => (
+                        <div
+                            className="w-full  transition-transform duration-700 ease-in-out transform flex-shrink-0 p-0 h-screen slider__image"
+                            style={{'--translateX': currentIndex} as CSSProperties}
+                            key={i}>
+                            <Image src={`/images/sliders/${i + 1}.jpg`} alt="Slide 1"
+                                   className="w-full h-full object-cover object-[80%_0%] lg:object-[0%_10%]"
+                                   width={1800}
+                                   height={1800}/>
+                        </div>
+                    ))}
+                </div>
+                <div className="absolute inset-0 bg-black opacity-40"></div>
+
+                <div className="move hidden md:block">
+                    <button onClick={prev}
+                            className="z-30 absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer bg-transparent p-2 rounded-full hover:border">
+                        <ArrowLeftIcon className="w-7 h-7 cursor-pointer"></ArrowLeftIcon>
+                    </button>
+                    <button onClick={next}
+                            className="z-30 absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer bg-transparent p-2 rounded-full hover:border">
+                        <ArrowRightIcon className="w-7 h-7 cursor-pointer"></ArrowRightIcon>
+                    </button>
                 </div>
             </div>
         </>

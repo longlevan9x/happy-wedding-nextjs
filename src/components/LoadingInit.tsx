@@ -17,7 +17,7 @@ export function LoadingInit() {
     return (
         <>
             <div
-                className="absolute z-50 bg-red-50 w-screen h-screen flex items-center justify-center loading animate__animated  animate__fadeOut animate__delay-3s">
+                className="absolute z-50 bg-red-50 w-full h-screen flex items-center justify-center loading animate__animated  animate__fadeOut animate__delay-3s">
                 {hearts.map((heart, i) => (
                     <svg key={i} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                          stroke="currentColor"

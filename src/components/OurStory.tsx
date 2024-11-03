@@ -3,7 +3,7 @@ import {useState} from "react";
 import {OurStoryInfos} from "@/data/websiteDataInfo";
 import {OurStoryModel} from "@/types/ourStory";
 import {getDay, getMonth, getYear} from "@/utils/date";
-import {titleFont} from "@/fonts/font";
+import {SectionTitle} from "@/components/shareds/SectionTitle";
 
 export function OurStory() {
     const [stories] = useState(OurStoryInfos as OurStoryModel[]);
@@ -11,16 +11,8 @@ export function OurStory() {
 
     return (
         <>
-            <div
-                className={"w-screen h-40 text-center flex flex-col items-center justify-center " + titleFont.className}>
-                <h1 className="text-pink-400 font-black text-6xl md:text-7xl mb-6 ">Chuyện tình yêu</h1>
-                <div className="w-full flex justify-center items-center space-x-3">
-                    <div className="border-b-2 w-32 md:w-44 border-pink-400"></div>
-                    <div className="border-[1px] w-4 h-4 rounded-full border-pink-400"></div>
-                    <div className="border-b-2 w-32 md:w-44 border-pink-400"></div>
-                </div>
-            </div>
-            <div className="w-screen h-full md:h-screen relative our-story">
+            <SectionTitle title="Chuyện tình yêu"></SectionTitle>
+            <div className="w-full h-full md:h-screen relative our-story">
                 <div className="flex flex-col lg:flex-row h-full lg:h-auto">
                     <div className="w-full lg:w-1/2 h-[calc(100vh/2)] lg:h-screen relative">
                         <div

@@ -48,7 +48,7 @@ export function CoupleInvite({coupleInfo}: CoupleInviteProps) {
                             </div>
                         </div>
                         <div
-                            className="absolute flex items-center w-full justify-center h-full animate__animated animate__pulse animate__infinite">
+                            className="absolute w-[57px] top-[33%] left-[46.7%] h-full animate__animated animate__pulse animate__infinite">
                             <div className="relative bg-white rounded-full w-14 h-14 flex items-center justify-center">
                                 <div
                                     className="absolute flex items-center justify-center -left-[0.4rem] scale-[0.3] heart"></div>
