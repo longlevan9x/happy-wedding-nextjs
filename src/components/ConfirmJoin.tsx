@@ -23,7 +23,7 @@ export function ConfirmJoin() {
                     <div className="w-full sm:w-auto">
                         <button
                             className="uppercase w-full sm:px-5 md:px-10 hover:bg-pink-600 lg:px-16 py-3 bg-pink-500 rounded-full">
-                            I am Attending
+                            Xác nhận tham dự
                         </button>
                     </div>
                 </div>
