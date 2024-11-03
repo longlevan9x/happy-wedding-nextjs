@@ -93,7 +93,7 @@ export const Metadata = {
 
 export const WeddingEventInfos = [
     {
-        title: "LỄ CƯỚI NHÀ NỮ",
+        title: "LỄ CƯỚI NHÀ GÁI",
         date: "2024/11/09",
         time: "16:30",
         address: `Tại gia đình nhà gái - ${CoupleInfo.female.address}`,
