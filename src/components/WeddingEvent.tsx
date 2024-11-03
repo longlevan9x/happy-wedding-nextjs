@@ -29,19 +29,19 @@ export function WeddingEvent() {
                                         <Image
                                             className="w-full h-full object-cover object-top"
                                             src="/images/bg/decor_f4.png"
-                                            alt="Love" width={1000} height={1000}></Image>
+                                            alt="Love" width={700} height={700}></Image>
                                     </div>
                                     <div className="absolute -bottom-0 -left-20 w-[40%] bg-transparent">
                                         <Image
                                             className="w-full h-full object-cover object-top"
                                             src="/images/bg/decor_l1.png"
-                                            alt="Love" width={1000} height={1000}></Image>
+                                            alt="Love" width={700} height={700}></Image>
                                     </div>
 
                                     <Image
                                         className="w-full h-full object-cover object-top bg-white p-4"
                                         src="/images/galleries/1.jpg"
-                                        alt="Love" width={700} height={1000}></Image>
+                                        alt="Love" width={700} height={700}></Image>
                                 </div>
                             </div>
                             <div className="w-full lg:w-1/2 flex flex-col space-y-6">
@@ -71,8 +71,8 @@ function WeddingEventInfo({eventInfo, index}: IWeddingEventInfo) {
                     <div className="w-full lg:w-1/3">
                         <div className="max-w-full lg:w-48 lg:h-48">
                             <Image className="w-full h-full object-cover object-top rounded-md"
-                                   src={eventInfo.image.src} alt="Love" width={1000}
-                                   height={1000}></Image>
+                                   src={eventInfo.image.src} alt="Love" width={500}
+                                   height={500}></Image>
                         </div>
                     </div>
                     <div className="w-full lg:w-2/3 flex flex-col justify-between pb-2">
