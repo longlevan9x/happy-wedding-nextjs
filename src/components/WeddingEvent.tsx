@@ -4,6 +4,7 @@ import {CalendarIcon, ClockIcon, MapPinIcon} from "@heroicons/react/24/outline";
 import {WeddingEventInfos} from "@/data/websiteDataInfo";
 import {WeddingEventInfoModel} from "@/types/WeddingEventInfo";
 import React from "react";
+import dayjs from "dayjs";
 
 interface IWeddingEventInfo {
     eventInfo: WeddingEventInfoModel,
@@ -79,7 +80,7 @@ function WeddingEventInfo({eventInfo, index}: IWeddingEventInfo) {
                             <div className="flex space-x-4">
                                 <div className="flex items-center space-x-1">
                                     <CalendarIcon className="w-5 h-5"></CalendarIcon>
-                                    <p>{eventInfo.date}</p>
+                                    <p>{dayjs(eventInfo.date).format("DD-MM-YYYY")}</p>
                                 </div>
                                 <div className="flex items-center space-x-1">
                                     <ClockIcon className="w-5 h-5"></ClockIcon>
