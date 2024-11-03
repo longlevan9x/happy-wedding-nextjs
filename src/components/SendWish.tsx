@@ -38,6 +38,7 @@ export function SendWish({wishes}: WishesProps) {
     return (
         <>
             <div
+                id="send-wish"
                 className="relative w-full bg-[url('/images/bg/img_bg_4.jpg')] bg-no-repeat bg-cover bg-center bg-local">
                 <div className="w-full absolute bg-black opacity-40 h-full z-10"></div>
 

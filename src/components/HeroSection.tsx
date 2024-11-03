@@ -138,7 +138,7 @@ function Slider() {
                 {sliders.map((_, i) => (
                     <div key={i}
                          onClick={() => changeIndex(i)}
-                         className={"cursor-pointer w-3 h-3 rounded-full " + (i === currentIndex ? "bg-red-500" : "bg-white")}></div>
+                         className={"cursor-pointer w-3 h-3 rounded-full " + (i === currentIndex ? "bg-pink-500" : "bg-white")}></div>
                 ))}
             </div>
         </>

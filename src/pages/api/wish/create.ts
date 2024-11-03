@@ -1,5 +1,6 @@
 import client from "@/libs/mongodb";
 import type {NextApiRequest, NextApiResponse} from "next";
+import {DB_COLLECTION_PREFIX} from "@/constant/constant";
 
 type ResponseData = {
     message: string
@@ -21,7 +22,7 @@ export default async function handler(
 
             const {name, emailOrPhone, wish} = await JSON.parse(body);
             const db = client.db("sample_mflix");
-            await db.collection("wishes").insertOne({name, emailOrPhone, wish, dateCreated});
+            await db.collection(DB_COLLECTION_PREFIX + "wishes").insertOne({name, emailOrPhone, wish, dateCreated});
             return res.status(201).json({message: "Message sent successfully"})
         } else {
             return res.status(202).json({message: req.method + " Message sent successfully"})

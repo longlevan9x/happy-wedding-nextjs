@@ -91,7 +91,7 @@ function WeddingEventInfo({eventInfo}: IWeddingEventInfo) {
                             </div>
                         </div>
                         <div className="mt-7 lg:mt-auto">
-                            <a className="py-2 px-4 bg-red-400 outline-0 hover:bg-red-500 text-white rounded-full"
+                            <a className="py-2 px-4 bg-pink-500 outline-0 hover:bg-pink-600 text-white rounded-full"
                                href={eventInfo.mapAddress}
                                target="_blank">Xem bản đồ</a>
                         </div>

@@ -17,8 +17,10 @@ import {CoupleInfo, Metadata, WeddingInfo} from "@/data/websiteDataInfo";
 import Head from "next/head";
 import {HeadMeta} from "@/components/HeadMeta";
 import {Gallery} from "@/components/Gallery";
-import { LoadingInit } from "@/components/LoadingInit";
+import {LoadingInit} from "@/components/LoadingInit";
 import {WeddingEvent} from "@/components/WeddingEvent";
+import {FixedIcon} from "@/components/FixedIcon";
+import {DB_COLLECTION_PREFIX} from "@/constant/constant";
 
 const playfair = Playfair({
     subsets: ['vietnamese'],
@@ -30,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     try {
         const db = client.db("sample_mflix");
         const wishes = await db
-            .collection("wishes")
+            .collection(DB_COLLECTION_PREFIX + "wishes")
             .find({})
             .sort({dateCreated: -1})
             .limit(20)
@@ -69,9 +71,8 @@ export default function Home({wishes}: WishesProps) {
                 <Gallery></Gallery>
                 <SendWish wishes={wishes}></SendWish>
                 <Thanks></Thanks>
+                <FixedIcon></FixedIcon>
             </div>
-
-
         </>
     );
 }
