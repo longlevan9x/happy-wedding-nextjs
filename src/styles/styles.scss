@@ -10,3 +10,7 @@
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(rgba(241, 78, 149), rgb(208, 1, 89));
 }
+
+* {
+    scroll-behavior: smooth;
+}
