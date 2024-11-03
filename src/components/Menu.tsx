@@ -63,9 +63,11 @@ const Menu = () => {
             </nav>
 
             {isOpen && (
-                <div className="md:hidden">
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-700">Home</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-700">Story</a>
+                <div className="md:hidden bg-black bg-opacity-30">
+                    {navs.map((nav: NavModel, i) => (
+                        <a key={i} href={"#" + nav.href}
+                           className="block cursor-pointer hover:bg-pink-600 px-4 py-2 ">{nav.title}</a>
+                    ))}
                 </div>
             )}
         </div>
