@@ -1,4 +1,3 @@
-// import {LoadingInit} from "@/components/LoadingInit";
 // import {Slider} from "@/components/Slider";
 import Menu from "@/components/Menu";
 import {HeroSection} from "@/components/HeroSection";
@@ -53,10 +52,40 @@ export default function Home({wishes}: WishesProps) {
     const [weddingInfo] = useState(WeddingInfo);
 
     useEffect(() => {
+
         setTimeout(() => {
             setIsLoading(false)
         }, 3000);
+
+
+        const observer = new IntersectionObserver(intersections => {
+            intersections.forEach((entry) => {
+                if (entry.intersectionRatio === 1) {
+                    entry.target.classList.toggle('animate__animated', entry.isIntersecting);
+                    entry.target.classList.remove('opacity-0');
+                    entry.target.classList.add('opacity-100');
+                } else {
+                    // entry.target.classList.remove('animate__animated');
+                }
+
+                // console.log("boundingClientRect" ,entry.boundingClientRect)
+                // console.log("intersectionRatio" , entry.intersectionRatio)
+                // console.log("intersectionRect", entry.intersectionRect)
+                // console.log("isIntersecting", entry.isIntersecting)
+                // console.log("rootBounds", entry.rootBounds)
+            });
+        }, {
+            threshold: [1],
+        });
+
+        setTimeout(() => {
+            document.querySelectorAll('.animated').forEach(div => {
+                observer.observe(div);
+            });
+        }, 4000);
+
     }, []);
+
     return (
         <>
             <Head>
@@ -64,11 +93,10 @@ export default function Home({wishes}: WishesProps) {
                 <HeadMeta></HeadMeta>
             </Head>
 
-            <div className={"h-full w-full bg-red-50 relative " + playfair.className}>
+            <div className={"h-full w-full bg-red-50 relative overflow-x-hidden" + playfair.className}>
                 <LoadingInit></LoadingInit>
                 <Menu></Menu>
                 <HeroSection coupleInfo={coupleInfo} weddingInfo={weddingInfo}></HeroSection>
-
                 {
                     !isLoading && (
                         <>
@@ -84,7 +112,6 @@ export default function Home({wishes}: WishesProps) {
                         </>
                     )
                 }
-
             </div>
         </>
     );

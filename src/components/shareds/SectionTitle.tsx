@@ -3,26 +3,32 @@ import React from "react";
 
 interface SectionTitleProps {
     title: string;
-    quote?: string
+    quote?: string;
+    showDecor?: boolean;
 }
 
 interface QuoteProps {
     quote?: string;
 }
 
-export function SectionTitle({title, quote}: SectionTitleProps) {
+export function SectionTitle({title, quote, showDecor}: SectionTitleProps) {
     return (
         <>
             <div
+                id={title}
                 className={"w-full min-h-40 text-center flex flex-col items-center justify-center "}>
-                <div className={titleFont.className}>
+                <div className={titleFont.className + " animated animate__slideInDown animate__delay-1s opacity-0"}>
                     <h1 className="text-pink-400 font-black text-6xl md:text-7xl mb-6 ">{title}</h1>
                 </div>
-                <div className="w-full flex justify-center items-center space-x-3">
-                    <div className="border-b-2 w-32 md:w-44 border-pink-400"></div>
-                    <div className="border-[1px] w-4 h-4 rounded-full border-pink-400"></div>
-                    <div className="border-b-2 w-32 md:w-44 border-pink-400"></div>
-                </div>
+                {
+                    showDecor &&
+                    <div className="w-full flex justify-center items-center space-x-3">
+                        <div className="border-b-2 w-32 md:w-44 border-pink-400"></div>
+                        <div className="border-[1px] w-4 h-4 rounded-full border-pink-400"></div>
+                        <div className="border-b-2 w-32 md:w-44 border-pink-400"></div>
+                    </div>
+                }
+
                 <Quote quote={quote}></Quote>
             </div>
         </>

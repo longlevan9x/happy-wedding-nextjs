@@ -15,3 +15,8 @@
     scroll-behavior: smooth;
 }
 
+@for $i from 5 through 30 {
+    .animate__delay-#{$i}s {
+        animation-delay: #{$i}s;
+    }
+}
