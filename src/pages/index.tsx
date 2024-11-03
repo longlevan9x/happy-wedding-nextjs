@@ -2,9 +2,9 @@
 import Menu from "@/components/Menu";
 import {HeroSection} from "@/components/HeroSection";
 import {CoupleInvite} from "@/components/CoupleInvite";
-import {WebsiteInfo} from "@/components/WebsiteInfo";
+// import {WebsiteInfo} from "@/components/WebsiteInfo";
 import {OurStory} from "@/components/OurStory";
-import {ConfirmJoin} from "@/components/ConfirmJoin";
+// import {ConfirmJoin} from "@/components/ConfirmJoin";
 import {Playfair} from "next/font/google";
 import {SendWish} from "@/components/SendWish";
 import {GetServerSideProps} from "next";
