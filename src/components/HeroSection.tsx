@@ -22,14 +22,16 @@ export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
                     className="container mx-auto relative z-10 flex flex-col justify-center items-center h-full text-center p-2">
                     <div
                         className={"mb-10 flex items-center space-x-2 text-5xl  " + titleFont.className}>
-                        <p className="font-bold leading-tight mb-4 w-28 sm:w-auto">{coupleInfo.male.fullName}</p>
-                        <p className="font-bold leading-tight mb-4">&</p>
-                        <p className="font-bold leading-tight mb-4 w-28 sm:w-auto">{coupleInfo.female.fullName}</p>
+                        <p className="font-bold leading-tight mb-4 w-28 animate__animated animate__slideInLeft animate__delay-3s sm:w-auto">{coupleInfo.male.fullName}</p>
+                        <p className="font-bold leading-tight mb-4 animate__animated animate__slideInDown animate__delay-3s">&</p>
+                        <p className="font-bold leading-tight mb-4 w-28 sm:w-auto animate__animated animate__slideInRight animate__delay-3s">{coupleInfo.female.fullName}</p>
                     </div>
-                    <p className="text-base sm:text-lg md:text-2xl text-gray-300 mb-12 sm:mb-20 tracking-[5px] border-t-2 border-b-2 py-3 px-5 ">
-                        WE&#39;RE GETTING MARRIED
-                    </p>
-                    <div className="relative flex space-x-5 sm:space-x-10 lg:space-x-20 font-serif">
+                    <div className="text-base sm:text-lg md:text-2xl text-gray-300 mb-12 sm:mb-20 tracking-[5px] border-t-2 border-b-2 py-3 px-5 animate__animated animate__fadeIn animate__delay-4s">
+                        <p className="typing-animation typing-animation_delay-4s">
+                            WE&#39;RE GETTING MARRIED
+                        </p>
+                    </div>
+                    <div className="relative flex space-x-5 sm:space-x-10 lg:space-x-20 font-serif ">
                         <div className="relative animate__animated animate__pulse animate__infinite">
                             <div
                                 className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
@@ -123,7 +125,7 @@ function Slider() {
                 </div>
                 <div className="absolute inset-0 bg-black opacity-40"></div>
 
-                <div className="move max-sm:w-28 max-sm:absolute max-sm:bottom-14 max-sm:-left-5 max-sm:rotate-90">
+                <div className="move max-sm:w-28 max-sm:absolute max-sm:bottom-20 max-sm:-right-5 max-sm:rotate-90">
                     <button onClick={prev}
                             className="z-30 absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer bg-transparent p-2 rounded-full hover:border">
                         <ArrowLeftIcon className="w-7 h-7 cursor-pointer"></ArrowLeftIcon>

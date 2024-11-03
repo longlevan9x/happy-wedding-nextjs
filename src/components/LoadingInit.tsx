@@ -7,7 +7,7 @@ export function LoadingInit() {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 4800)
+        }, 5000)
     }, [])
 
     if (!loading) {

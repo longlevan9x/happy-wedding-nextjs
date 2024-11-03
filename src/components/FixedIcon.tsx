@@ -17,7 +17,7 @@ export function FixedIcon() {
 
     return (
         <>
-            <div className="fixed bottom-24 right-6 space-y-5">
+            <div className="fixed bottom-10 left-6 space-y-5">
                 <a href="#send-wish">
                     <div className="p-3 rounded-full z-50 bg-pink-500 hover:bg-pink-600 hover:scale-110 cursor-pointer" title="Gửi lời chúc">
                         <ChatBubbleLeftIcon

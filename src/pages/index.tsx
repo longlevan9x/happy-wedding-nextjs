@@ -10,7 +10,7 @@ import {Playfair} from "next/font/google";
 import {SendWish} from "@/components/SendWish";
 import {GetServerSideProps} from "next";
 import client from "@/libs/mongodb";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {WishesProps} from "@/types/wish";
 import {Thanks} from "@/components/Thanks";
 import {CoupleInfo, Metadata, WeddingInfo} from "@/data/websiteDataInfo";
@@ -48,10 +48,15 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 export default function Home({wishes}: WishesProps) {
-
+    const [isLoading, setIsLoading] = useState(true);
     const [coupleInfo] = useState(CoupleInfo);
     const [weddingInfo] = useState(WeddingInfo);
 
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 3000);
+    }, []);
     return (
         <>
             <Head>
@@ -63,15 +68,23 @@ export default function Home({wishes}: WishesProps) {
                 <LoadingInit></LoadingInit>
                 <Menu></Menu>
                 <HeroSection coupleInfo={coupleInfo} weddingInfo={weddingInfo}></HeroSection>
-                <CoupleInvite coupleInfo={coupleInfo} weddingInfo={weddingInfo}></CoupleInvite>
-                <WeddingEvent></WeddingEvent>
-                <WebsiteInfo></WebsiteInfo>
-                <OurStory></OurStory>
-                <ConfirmJoin></ConfirmJoin>
-                <Gallery></Gallery>
-                <SendWish wishes={wishes}></SendWish>
-                <Thanks></Thanks>
-                <FixedIcon></FixedIcon>
+
+                {
+                    !isLoading && (
+                        <>
+                            <CoupleInvite coupleInfo={coupleInfo} weddingInfo={weddingInfo}></CoupleInvite>
+                            <WeddingEvent></WeddingEvent>
+                            <WebsiteInfo></WebsiteInfo>
+                            <OurStory></OurStory>
+                            <ConfirmJoin></ConfirmJoin>
+                            <Gallery></Gallery>
+                            <SendWish wishes={wishes}></SendWish>
+                            <Thanks></Thanks>
+                            <FixedIcon></FixedIcon>
+                        </>
+                    )
+                }
+
             </div>
         </>
     );
