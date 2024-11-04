@@ -2,12 +2,21 @@ import Image from "next/image";
 import React, {FormEvent, useState} from "react";
 import {WishesProps} from "@/types/wish";
 import {titleFont} from "@/fonts/font";
+import {FaceSmileIcon, GiftIcon} from "@heroicons/react/24/outline";
+import {wishSuggests} from "@/data/wishSuggests";
+import EmojiPicker from "emoji-picker-react";
 
 export function SendWish({wishes}: WishesProps) {
     const [formState, setFormState] = useState({name: "", emailOrPhone: "", wish: ""});
     const [message, setMessage] = useState("");
+    const [submitting, setSubmitting] = useState(false);
+    const [isShowSuggest, setIsShowSuggest] = useState(false);
+    const [isShowEmoji, setIsShowEmoji] = useState(false);
 
     const handleSubmit = async (e: FormEvent) => {
+        if (submitting) return;
+
+        setSubmitting(true);
         e.preventDefault();
         // Fetching API endpoint
         try {
@@ -19,13 +28,26 @@ export function SendWish({wishes}: WishesProps) {
             setMessage("Cảm ơn đã gửi lời chúc cho chúng tôi.");
             setFormState({name: "", emailOrPhone: "", wish: ""});
             wishes.unshift(formState);
+            setSubmitting(false);
             setTimeout(() => {
                 setMessage("");
             }, 3000);
         } catch (e) {
             console.log(e);
+            setSubmitting(false);
             setMessage("Awww~. Gửi không thành công mất rồi. Hãy thử lại nhé.");
         }
+    };
+
+    const onEmojiClick = (event: any) => {
+        formState.wish += event.emoji;
+        setFormState({...formState});
+    };
+
+    const onSelectSuggest = (index: number) => {
+        formState.wish = wishSuggests[index].content;
+        setFormState({...formState});
+        setIsShowSuggest(false);
     };
 
     const handleChange = (e: any) => {
@@ -85,17 +107,65 @@ export function SendWish({wishes}: WishesProps) {
                                            className="w-full bg-white px-5 py-3 text-base sm:text-xl bg-opacity-20 placeholder-white outline-0 rounded-lg"/>
                                 </div>
                                 <div className="w-full">
-                            <textarea rows={4} placeholder="Nhập lời chúc của bạn"
-                                      required
-                                      name="wish"
-                                      value={formState.wish}
-                                      onChange={handleChange}
-                                      className="w-full bg-white px-5 py-3 text-base sm:text-xl bg-opacity-20 placeholder-white outline-0 rounded-lg"></textarea>
+                                        <textarea rows={4} placeholder="Nhập lời chúc của bạn"
+                                                  required
+                                                  name="wish"
+                                                  value={formState.wish}
+                                                  onChange={handleChange}
+                                                  className="w-full bg-white px-5 py-3 text-base sm:text-xl bg-opacity-20 placeholder-white outline-0 rounded-t-lg">
+                                        </textarea>
+                                    <div
+                                        className="w-full bg-white bg-opacity-20 rounded-b-lg  -mt-2 flex justify-end space-x-2 p-2 relative">
+                                        <GiftIcon onClick={() => setIsShowSuggest(!isShowSuggest)}
+                                                  className="w-6 h-6 cursor-pointer"
+                                                  title="Lời chúc gợi ý"></GiftIcon>
+                                        <FaceSmileIcon onClick={() => setIsShowEmoji(!isShowEmoji)}
+                                                       className="w-6 h-6 cursor-pointer"
+                                                       title="Chèn biểu tượng"></FaceSmileIcon>
+
+                                        <div
+                                            className={"absolute right-0 top-10 w-full py-2 transform transition-all duration-700 shadow-md text-sm font-medium bg-white rounded-sm text-black opacity-0  " + (isShowSuggest ? "opacity-100 z-50" : "z-[-1]")}>
+                                            <div className="w-full">
+                                                <input type="text"
+                                                       className="outline-0 w-full py-3 px-2 border border-gray-10"
+                                                       placeholder="Tìm kiếm"/>
+                                            </div>
+                                            <ul className="max-h-80 overflow-scroll">
+                                                {
+                                                    wishSuggests.map((wishSuggest: any, i) => (
+                                                        <li key={i}
+                                                            onClick={() => (
+                                                                onSelectSuggest(i)
+                                                            )}
+                                                            className={"cursor-pointer px-3 py-2 hover:bg-gray-300 " + (i % 2 == 0 ? "bg-gray-200" : "")}> {wishSuggest.content}</li>
+                                                    ))
+                                                }
+                                            </ul>
+                                        </div>
+
+
+                                        <div
+                                            className={"absolute right-0 top-10 transform transition-all duration-500 opacity-0  " + (isShowEmoji ? "opacity-100 z-50" : "z-[-1]")}>
+                                            <EmojiPicker onEmojiClick={onEmojiClick}></EmojiPicker>
+                                        </div>
+
+                                    </div>
                                 </div>
                                 <div className="w-full">
                                     <button
                                         type="submit"
-                                        className="uppercase w-full sm:px-5 md:px-10 hover:bg-pink-600 lg:px-16 py-3 bg-pink-500 rounded-full">
+                                        className="uppercase w-full flex items-center justify-center sm:px-5 md:px-10 hover:bg-pink-600 lg:px-16 py-3 bg-pink-500 rounded-full">
+                                        {
+                                            submitting && <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                                                               xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                               viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                                        stroke-width="4"></circle>
+                                                <path className="opacity-75" fill="currentColor"
+                                                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                        }
+
                                         Gửi lời chúc
                                     </button>
                                 </div>
@@ -120,4 +190,8 @@ export function SendWish({wishes}: WishesProps) {
             </div>
         </>
     );
+}
+
+function SuggestList() {
+
 }

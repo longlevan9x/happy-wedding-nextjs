@@ -85,6 +85,7 @@ const ParticleHeart = () => {
                         straight: false,
                         outModes: {
                             default: "out",
+                            bottom: "destroy"
                         },
                         attract: {enable: false, rotate: {x: 600, y: 1200}}
                     }

@@ -57,7 +57,6 @@ export default function Home({wishes}: WishesProps) {
             setIsLoading(false)
         }, 3000);
 
-
         const observer = new IntersectionObserver(intersections => {
             intersections.forEach((entry) => {
                 if (entry.intersectionRatio === 1) {
@@ -99,7 +98,7 @@ export default function Home({wishes}: WishesProps) {
                 <HeadMeta></HeadMeta>
             </Head>
 
-            <div className={"h-full w-full bg-red-50 relative overflow-x-hidden" + playfair.className}>
+            <div id="main" className={"h-full w-full bg-red-50 relative overflow-x-hidden" + playfair.className}>
                 <LoadingInit></LoadingInit>
                 <Menu></Menu>
                 <HeroSection coupleInfo={coupleInfo} weddingInfo={weddingInfo}></HeroSection>
@@ -115,11 +114,13 @@ export default function Home({wishes}: WishesProps) {
                             <Gallery></Gallery>
                             <SendWish wishes={wishes}></SendWish>
                             <Thanks></Thanks>
-                            <FixedIcon></FixedIcon>
                         </>
                     )
                 }
             </div>
+            {
+                !isLoading && <FixedIcon></FixedIcon>
+            }
         </>
     );
 }
