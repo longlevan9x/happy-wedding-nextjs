@@ -20,6 +20,7 @@ import {LoadingInit} from "@/components/LoadingInit";
 import {WeddingEvent} from "@/components/WeddingEvent";
 import {FixedIcon} from "@/components/FixedIcon";
 import {DB_COLLECTION_PREFIX} from "@/constant/constant";
+import ParticleHeart from "@/components/paricles/Heart";
 
 const playfair = Playfair({
     subsets: ['vietnamese'],
@@ -105,6 +106,7 @@ export default function Home({wishes}: WishesProps) {
                 {
                     !isLoading && (
                         <>
+                            <ParticleHeart></ParticleHeart>
                             <CoupleInvite coupleInfo={coupleInfo} weddingInfo={weddingInfo}></CoupleInvite>
                             <WeddingEvent></WeddingEvent>
                             {/*<WebsiteInfo></WebsiteInfo>*/}
