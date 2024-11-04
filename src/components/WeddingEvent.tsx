@@ -18,7 +18,7 @@ export function WeddingEvent() {
                 <section className="container mx-auto">
                     <div className="wedding-event__wrapper w-full py-10 px-4">
                         <SectionTitle title="Sự kiện cưới"
-                                      quote="...tình yêu không phải là nhìn chằm chằm vào nhau, mà là nhìn chằm chằm về cùng một hướng...">
+                                      quote="Tình yêu ko phải nhìn chằm chằm vào nhau, mà là cùng nhau nhìn về một hướng">
                         </SectionTitle>
                         <div className="w-full mx-auto flex flex-col lg:flex-row mt-14 gap-8 ">
                             <div
