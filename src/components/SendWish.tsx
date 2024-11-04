@@ -194,7 +194,3 @@ export function SendWish({wishes}: WishesProps) {
         </>
     );
 }
-
-function SuggestList() {
-
-}
