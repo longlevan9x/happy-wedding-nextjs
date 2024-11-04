@@ -31,7 +31,7 @@ export function OurStory() {
             setCurrentIndex(index);
             setImageClassAnimated("");
             setImageClassAnimated("animate__animated  animate__zoomIn");
-        }, 500);
+        }, 400);
     }
 
     return (

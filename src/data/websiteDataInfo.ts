@@ -63,7 +63,7 @@ export const OurStoryInfos: OurStoryModel[] = [
         content: "Buổi hẹn hò đầu tiên của chúng ta tại quán Nhà gỗ café. Khi anh đến thì đã thấy một cô gái xinh xắn, nhỏ nhắn ngồi bên góc bàn cạnh cửa sổ, chúng ta có những giây phút chuyện trò ban đầu thật ngại ngùng. Mãi sau này khi chúng ta chính thức yêu nhau, em hay đùa rằng “buổi hẹn đầu tiên thấy anh cũng ít nói, nhưng em quay sang thấy anh đẹp trai nên lại tiếp tục cố gắng gợi chuyện”. Anh không nghĩ rằng nhan sắc bình thường của anh cũng là một thứ vũ khí lợi hại đến thế😊. Và anh cũng hiểu ra rằng, tình yêu thực sự phải bắt đầu từ sự cố gắng của cả hai phía."
     },
     {
-        date: '2023/20/10',
+        date: '2023/10/20',
         caption: "",
         image: {
             src: "/images/stories/1.jpg",
