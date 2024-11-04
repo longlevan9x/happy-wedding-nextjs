@@ -40,38 +40,38 @@ export const OurStoryInfos: OurStoryModel[] = [
             with: 1000,
             height: 1000,
         },
-        content: "“Tiếng trái tim đôi ta đập thật nhanh. Thì thầm lời yêu thương. Ngày tình về chung đôi...” Sau bao nhiêu chờ đợi, cuối cùng ngày vui của chúng ta cũng tới rồi. Cảm ơn vì mình đã luôn là một phần trong cuộc sống của nhau. Em và anh không chỉ là người yêu mà chúng ta còn là tri kỷ. Ngày hôm nay, em sẽ là cô dâu của anh và sau này sẽ là mẹ của các con anh."
+        content: "Sau bao nhiêu ngày chờ đợi, tình yêu của chúng ta đơm hoa kết trái bằng một lễ cưới ấm áp và ngọt ngào. Ngày hôm nay, em sẽ chính thức là cô dâu của anh và sau này là mẹ của các con anh. Cảm ơn vì mình luôn là một phần trong cuộc sống của nhau. Anh mong sau này dù tương lai có như thế nào thì chúng ta luôn nhớ rằng “tình yêu không phải là nhìn chằm chằm vào nhau, mà là cùng nhau nhìn về một hướng”."
     },
     {
-        date: '2024/10/20',
+        date: '2024/09/02',
         caption: "Phút Giây Cầu Hôn",
         image: {
             src: "/images/stories/3.jpg",
             with: 1000,
             height: 1000,
         },
-        content: "5 năm bên nhau không phải là quãng thời gian quá dài, nhưng đủ cho chúng ta nhận ra được rất nhiều điều. Yêu nhau, vun vén hạnh phúc và cùng nỗ lực vượt qua những khó khăn trong cuộc sống. Chúng ta từ 2 con người xa lạ mà bước vào cuộc đời nhau. Và giờ đây chúng ta tiếp tục cùng nhau sang trang mới. Giây phút anh ngỏ lời “Làm vợ anh nhé!”, em đã nguyện ý đời này, đi đâu cũng được, miễn là cùng anh."
+        content: "Anh cầu hôn em sau khi chúng ta đã công khai tình yêu của chúng mình tới gia đình và bạn bè. Cảm giác hạnh phúc vỡ òa khi em nói lời đồng ý. Chúng ta thật hạnh phúc và may mắn vì hai bên gia đình và bạn bè thân thiết đều ủng hộ và gửi lời chúc mừng tới hai đứa. Hai đứa bắt đầu ấp ủ ý tưởng và những kế hoạch chuẩn bị về một hôn lễ giản dị, ấm áp và ngọt ngào."
     },
 
     {
-        date: '2024/10/01',
+        date: '2023/10/27',
         caption: "Lời Tỏ Tình Dễ Thương^^",
         image: {
             src: "/images/stories/2.jpg",
             with: 1000,
             height: 1000,
         },
-        content: "Ngày ấy, tôi 21! Một mình giữa phố thị nấp tập. Mỗi chiều cuối tuần thường chạy xe vòng quanh qua những con phố, len lỏi trong từng dòng người tấp nập. Hay thậm chí là ghé vào một quán cà phê ven đường để ngồi đó và cảm nhận về cuộc sống của riêng mình. Đôi khi lạc lõng và hơi cô đơn. Nhưng rồi một ngày đẹp trời, người con trai ấy xuất hiện, nắm tay rồi thủ thỉ vào tai: “Hy vọng sau này anh được làm những điều ấy cùng em”."
+        content: "Buổi hẹn hò đầu tiên của chúng ta tại quán Nhà gỗ café. Khi anh đến thì đã thấy một cô gái xinh xắn, nhỏ nhắn ngồi bên góc bàn cạnh cửa sổ, chúng ta có những giây phút chuyện trò ban đầu thật ngại ngùng. Mãi sau này khi chúng ta chính thức yêu nhau, em hay đùa rằng “buổi hẹn đầu tiên thấy anh cũng ít nói, nhưng em quay sang thấy anh đẹp trai nên lại tiếp tục cố gắng gợi chuyện”. Anh không nghĩ rằng nhan sắc bình thường của anh cũng là một thứ vũ khí lợi hại đến thế😊. Và anh cũng hiểu ra rằng, tình yêu thực sự phải bắt đầu từ sự cố gắng của cả hai phía."
     },
     {
-        date: '2024/09/20',
+        date: '2023/20/10',
         caption: "Bạn Có Tin Vào Tình Yêu Online Không?",
         image: {
             src: "/images/stories/1.jpg",
             with: 1000,
             height: 1000,
         },
-        content: "Tôi đã từng không tin vào tình yêu online. Đã từng nghĩ làm sao có thể thích một người chưa từng gặp mặt? Vậy mà giờ đây tôi lại đang như vậy, bây giờ tôi đã hiểu: thế giới ảo tình yêu thật đấy!!! Ngày ấy vu vơ đăng một dòng status trên facebook than thở, vu vơ đùa giỡn nói chuyện với một người xa lạ chưa từng quen. Mà nào hay biết, 4 năm sau người ấy lại là chồng mình."
+        content: "Ngày mà anh bắt đầu những tin nhắn đầu tiên làm quen em. Anh đã gõ gõ, rồi lại xóa xóa nhưng vẫn không nghĩ ra được gì hay hơn là những dòng tin nhắn thật nhạt nhẽo “Chào em, anh là bạn của Thuyên”. Vậy mà em cũng đã phản hồi lại anh bằng những tin nhắn đáng yêu. Chúng ta tạo dựng lên tình yêu ngọt ngào bắt đầu từ những điều đơn giản như vậy. Đến bây giờ, anh luôn biết ơn vì mình có những người bạn uy tín và tuyệt vời đến vậy, đã giúp chúng ta có duyên gặp và yêu nhau."
     },
 ]
 
