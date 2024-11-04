@@ -28,7 +28,7 @@ export const CoupleInfo: CoupleModel = {
 };
 
 export const WeddingInfo: WeddingModel = {
-    weddingDate: "2024/11/09"
+    weddingDate: "2024/11/10"
 };
 
 export const OurStoryInfos: OurStoryModel[] = [
