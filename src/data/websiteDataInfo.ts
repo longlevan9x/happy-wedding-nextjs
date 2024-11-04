@@ -1,6 +1,7 @@
 import {CoupleModel} from "@/types/couple";
 import {WeddingModel} from "@/types/wedding";
 import {OurStoryModel} from "@/types/ourStory";
+import {BASE_URL} from "@/constant/constant";
 
 export const CoupleInfo: CoupleModel = {
     male: {
@@ -88,7 +89,7 @@ export const Metadata = {
         width: 100,
         height: 100
     },
-    url: "https://happy-wedding-topaz.vercel.app"
+    url: BASE_URL
 }
 
 export const WeddingEventInfos = [
