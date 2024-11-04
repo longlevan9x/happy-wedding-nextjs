@@ -79,7 +79,7 @@ export function HeroSection({coupleInfo, weddingInfo}: HeroProps) {
                 {/*</div>*/}
 
                 <div
-                    className="absolute bottom-5 right-[45%] z-20 flex flex-col justify-center p-4 rounded-full items-center text-center border-2 h-16">
+                    className="absolute bottom-5 right-[45%] lg:right-1/2 z-20 flex flex-col justify-center p-4 rounded-full items-center text-center border-2 h-16">
                     <div
                         className="relative top-3 text-2xl font-bold animate__animated animate__slideInDown animate__infinite">.
                     </div>
