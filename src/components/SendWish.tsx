@@ -144,7 +144,7 @@ export function SendWish({wishes}: WishesProps) {
                                         </div>
 
                                         {
-                                            isShowEmoji && 
+                                            isShowEmoji &&
                                             <div
                                                 className={"absolute right-0 top-10 transform transition-all duration-500 opacity-0  " + (isShowEmoji ? "opacity-100 z-50" : "z-[-1]")}>
                                                 <EmojiPicker onEmojiClick={onEmojiClick}></EmojiPicker>
