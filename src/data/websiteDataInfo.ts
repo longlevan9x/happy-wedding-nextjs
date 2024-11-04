@@ -52,7 +52,6 @@ export const OurStoryInfos: OurStoryModel[] = [
         },
         content: "Anh cầu hôn em sau khi chúng ta đã công khai tình yêu của chúng mình tới gia đình và bạn bè. Cảm giác hạnh phúc vỡ òa khi em nói lời đồng ý. Chúng ta thật hạnh phúc và may mắn vì hai bên gia đình và bạn bè thân thiết đều ủng hộ và gửi lời chúc mừng tới hai đứa. Hai đứa bắt đầu ấp ủ ý tưởng và những kế hoạch chuẩn bị về một hôn lễ giản dị, ấm áp và ngọt ngào."
     },
-
     {
         date: '2023/10/27',
         caption: "",
