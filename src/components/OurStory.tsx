@@ -120,14 +120,20 @@ export function OurStory() {
                                 </div>
 
                                 <div className="flex flex-col space-y-2 md:space-y-10 max-sm:pt-5">
-                                    <p className="text-2xl sm:text-3xl md:text-6xl font-bold animated opacity-0">{stories[currentIndex].caption}</p>
+                                    {
+                                        stories[currentIndex].caption &&
+                                        <p className="text-2xl sm:text-3xl md:text-6xl font-bold animated opacity-0">{stories[currentIndex].caption}</p>
+                                    }
+
                                     <p className="text-xl font-medium leading-8 text-justify animated opacity-0">{stories[currentIndex].content}</p>
                                 </div>
 
-                                <div className="max-sm:absolute max-sm:top-9 max-sm:right-3 flex space-x-0 cursor-pointer">
+                                <div
+                                    className="max-sm:absolute max-sm:top-9 max-sm:right-3 flex space-x-0 cursor-pointer">
                                     <div><ArrowLeftIcon
                                         onClick={prev}
-                                        className="p-2 max-sm:w-11 max-sm:h-11 w-14 h-14 hover:border hover:border-black"></ArrowLeftIcon></div>
+                                        className="p-2 max-sm:w-11 max-sm:h-11 w-14 h-14 hover:border hover:border-black"></ArrowLeftIcon>
+                                    </div>
                                     <div><ArrowRightIcon
                                         onClick={next}
                                         className="p-2 max-sm:w-11 max-sm:h-11 w-14 h-14 hover:border hover:border-black"></ArrowRightIcon>

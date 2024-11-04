@@ -34,7 +34,7 @@ export const WeddingInfo: WeddingModel = {
 export const OurStoryInfos: OurStoryModel[] = [
     {
         date: '2024/11/10',
-        caption: "Ngày Lễ Đính Hôn",
+        caption: "",
         image: {
             src: "/images/stories/4.jpg",
             with: 1000,
@@ -44,7 +44,7 @@ export const OurStoryInfos: OurStoryModel[] = [
     },
     {
         date: '2024/09/02',
-        caption: "Phút Giây Cầu Hôn",
+        caption: "",
         image: {
             src: "/images/stories/3.jpg",
             with: 1000,
@@ -55,7 +55,7 @@ export const OurStoryInfos: OurStoryModel[] = [
 
     {
         date: '2023/10/27',
-        caption: "Lời Tỏ Tình Dễ Thương^^",
+        caption: "",
         image: {
             src: "/images/stories/2.jpg",
             with: 1000,
@@ -65,7 +65,7 @@ export const OurStoryInfos: OurStoryModel[] = [
     },
     {
         date: '2023/20/10',
-        caption: "Bạn Có Tin Vào Tình Yêu Online Không?",
+        caption: "",
         image: {
             src: "/images/stories/1.jpg",
             with: 1000,
