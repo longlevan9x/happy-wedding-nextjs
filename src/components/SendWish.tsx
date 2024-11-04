@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, {FormEvent, useState} from "react";
+import React, {FormEvent, useEffect, useState} from "react";
 import {WishesProps} from "@/types/wish";
 import {titleFont} from "@/fonts/font";
 import {FaceSmileIcon, GiftIcon} from "@heroicons/react/24/outline";
@@ -12,6 +12,13 @@ export function SendWish({wishes}: WishesProps) {
     const [submitting, setSubmitting] = useState(false);
     const [isShowSuggest, setIsShowSuggest] = useState(false);
     const [isShowEmoji, setIsShowEmoji] = useState(false);
+    const [suggestSearchText, setSuggestSearchText] = useState("");
+    const [suggests, setSuggests] = useState(wishSuggests);
+
+    useEffect(() => {
+        const _suggests = wishSuggests.filter(w => w.content.toLowerCase().includes(suggestSearchText.toLocaleLowerCase()));
+        setSuggests(_suggests);
+    }, [suggestSearchText]);
 
     const handleSubmit = async (e: FormEvent) => {
         if (submitting) return;
@@ -127,12 +134,13 @@ export function SendWish({wishes}: WishesProps) {
                                             className={"absolute right-0 top-10 w-full py-2 transform transition-all duration-700 shadow-md text-sm font-medium bg-white rounded-sm text-black opacity-0  " + (isShowSuggest ? "opacity-100 z-50" : "z-[-1]")}>
                                             <div className="w-full">
                                                 <input type="text"
+                                                       onChange={(e) => setSuggestSearchText(e.target.value)}
                                                        className="outline-0 w-full py-3 px-2 border border-gray-10"
                                                        placeholder="Tìm kiếm"/>
                                             </div>
                                             <ul className="max-h-80 overflow-scroll">
                                                 {
-                                                    wishSuggests.map((wishSuggest: any, i) => (
+                                                    suggests.map((wishSuggest: any, i) => (
                                                         <li key={i}
                                                             onClick={() => (
                                                                 onSelectSuggest(i)
